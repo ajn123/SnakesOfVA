@@ -42,7 +42,8 @@ class SnakeCell: UITableViewCell {
         self.detailLabel.text = snake.scientificName
         
      // self.bImage =  snake.primaryImage!
-      self.bImage =  UIImage(named: "northern_copperhead")!
+        // self.bImage =  UIImage(named: "northern_copperhead")!
+        self.bImage =  UIImage(named: "copperhead16to9ratio")!
         
         setLayout()
     }
@@ -94,6 +95,8 @@ class SnakeCell: UITableViewCell {
         self.addConstraints(c1)
         self.addConstraints(c2)
         self.addConstraints(cl3)
+        
+        //print(bImage.size)
         
     }
 }

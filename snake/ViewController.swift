@@ -41,7 +41,7 @@ class ViewController: UITableViewController {
       //  imgView.contentMode = UIViewContentMode.ScaleAspectFit
         //cell.backgroundView! = imgView
         //cell.im = UIImageView(image: snake.primaryImage)
-        
+        print("B Image is: \(cell.bImage.size)")
         return cell
     }
     
@@ -51,7 +51,7 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 347.0
+        return 250.0
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -63,6 +63,13 @@ class ViewController: UITableViewController {
         return SnakesManager.instance.header.count
     }
     
+    
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        var c = cell as! SnakeCell
+        print("B Image is: \(c.bImage.size)")
+        c.bImage = UIImage.scaleUIImageToSize(c.bImage, size: c.bImage.size)
+        print("B2 Image is: \(c.bImage.size)")
+    }
     
     // Set the section background color
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21CC23AD1C083BF3003EBA8C /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CC23AC1C083BF3003EBA8C /* UIImageExtension.swift */; };
 		A34AE7051BF260AC00FBBB19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34AE7041BF260AC00FBBB19 /* AppDelegate.swift */; };
 		A34AE7071BF260AC00FBBB19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34AE7061BF260AC00FBBB19 /* ViewController.swift */; };
 		A34AE70A1BF260AC00FBBB19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A34AE7081BF260AC00FBBB19 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		21CC23AC1C083BF3003EBA8C /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		A34AE7011BF260AC00FBBB19 /* snake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = snake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A34AE7041BF260AC00FBBB19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A34AE7061BF260AC00FBBB19 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21CC23AB1C083BDE003EBA8C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				21CC23AC1C083BF3003EBA8C /* UIImageExtension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		A34AE6F81BF260AC00FBBB19 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +72,7 @@
 		A34AE7031BF260AC00FBBB19 /* snake */ = {
 			isa = PBXGroup;
 			children = (
+				21CC23AB1C083BDE003EBA8C /* Extensions */,
 				A34AE7041BF260AC00FBBB19 /* AppDelegate.swift */,
 				A34AE7061BF260AC00FBBB19 /* ViewController.swift */,
 				A34AE7081BF260AC00FBBB19 /* Main.storyboard */,
@@ -108,7 +119,7 @@
 				TargetAttributes = {
 					A34AE7001BF260AC00FBBB19 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = NY32Q8TY38;
+						DevelopmentTeam = AVVG5XQFMS;
 					};
 				};
 			};
@@ -150,6 +161,7 @@
 			files = (
 				A34AE7071BF260AC00FBBB19 /* ViewController.swift in Sources */,
 				A3777E9F1BFBA6DE00252EE6 /* SnakeViewController.swift in Sources */,
+				21CC23AD1C083BF3003EBA8C /* UIImageExtension.swift in Sources */,
 				A34AE7051BF260AC00FBBB19 /* AppDelegate.swift in Sources */,
 				A34AE7191BF267D900FBBB19 /* SnakesManager.swift in Sources */,
 				A34AE7171BF264FE00FBBB19 /* Snake.swift in Sources */,
@@ -264,10 +276,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = snake/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self..snake;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -276,10 +291,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = snake/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self..snake;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
