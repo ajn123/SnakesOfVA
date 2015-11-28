@@ -47,6 +47,7 @@ class ViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let vc = SnakeViewController()
+        vc.title = SnakesManager.instance.snakes[indexPath.section][indexPath.row].commonName
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -65,10 +66,10 @@ class ViewController: UITableViewController {
     
     
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        var c = cell as! SnakeCell
-        print("B Image is: \(c.bImage.size)")
-        c.bImage = UIImage.scaleUIImageToSize(c.bImage, size: c.bImage.size)
-        print("B2 Image is: \(c.bImage.size)")
+        let c = cell as! SnakeCell
+  //      print("B Image is: \(c.bImage.size)")
+        c.bImage = UIImage.scaleUIImageToSize(c.bImage, size: c.frame.size)
+  //      print("B2 Image is: \(c.bImage.size)")
     }
     
     // Set the section background color
