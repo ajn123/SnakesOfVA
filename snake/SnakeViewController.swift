@@ -83,6 +83,10 @@ class SnakeViewController: UIViewController {
         
         self.screenScrollView.addConstraints(constraint3)
         self.screenScrollView.addConstraints(constraint4)
+        
+        
+        
+        
     
         let c1 =
           NSLayoutConstraint(item: self.pageControl, attribute: .CenterX, relatedBy: .Equal,

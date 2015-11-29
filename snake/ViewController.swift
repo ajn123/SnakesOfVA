@@ -33,15 +33,15 @@ class ViewController: UITableViewController {
         //let cell = tableView.dequeueReusableCellWithIdentifier("snakeCell") as! SnakeCell
         let snake = SnakesManager.instance.snakes[indexPath.section][indexPath.row]
         let cell = SnakeCell(snake: snake)
-        print("\(indexPath.row)  \(snake.commonName)")
+        // print("\(indexPath.row)  \(snake.commonName)")
         //print(snake.commonName)
-      //  cell.textLabel?.text = snake.commonName
+        //  cell.textLabel?.text = snake.commonName
         
-      //  let imgView = UIImageView(image: snake.primaryImage)
-      //  imgView.contentMode = UIViewContentMode.ScaleAspectFit
+        //  let imgView = UIImageView(image: snake.primaryImage)
+        //  imgView.contentMode = UIViewContentMode.ScaleAspectFit
         //cell.backgroundView! = imgView
         //cell.im = UIImageView(image: snake.primaryImage)
-        print("B Image is: \(cell.bImage.size)")
+        // print("B Image is: \(cell.bImage.size)")
         return cell
     }
     

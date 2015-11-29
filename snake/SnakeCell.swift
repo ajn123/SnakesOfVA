@@ -43,7 +43,8 @@ class SnakeCell: UITableViewCell {
         
      // self.bImage =  snake.primaryImage!
         // self.bImage =  UIImage(named: "northern_copperhead")!
-        self.bImage =  UIImage(named: "copperhead16to9ratio")!
+        print(snake.commonName)
+        self.bImage =  snake.primaryImage!
         
         setLayout()
     }

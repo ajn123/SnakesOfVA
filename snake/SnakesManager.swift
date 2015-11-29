@@ -27,7 +27,7 @@ class SnakesManager {
         
 // Venomous Species
         venomousSnakes.append(
-          Snake(commonName: "Northern Copperhead", scientificName: "Agkistrodon contortrix mokasen", primaryImage: "copperhead.png"))
+          Snake(commonName: "Northern Copperhead", scientificName: "Agkistrodon contortrix mokasen", primaryImage: "copperhead16to9ratio"))
         
        
         venomousSnakes.append(
