@@ -18,6 +18,8 @@ class SnakeViewController: UIViewController {
         return UIScreen.mainScreen().bounds.height
     }
     
+    let mapViewImageHeight: CGFloat = 200.0
+    
     lazy var slideShow: UIScrollView = {
         var slide = UIScrollView(frame: CGRect(x: 0, y: 0,
             width: UIScreen.mainScreen().bounds.width, height: 200))
@@ -70,37 +72,38 @@ class SnakeViewController: UIViewController {
         self.screenScrollView.addSubview(mapImage)
         self.screenScrollView.addSubview(pageControl)
         
-        let dict = ["slide": slideShow, "mapImage": mapImage,
-            "pageControl": pageControl, "screenScroll": screenScrollView]
-   
-        
-        let constraint3 =
-          NSLayoutConstraint.constraintsWithVisualFormat("V:|-230-[mapImage]",
-            options: NSLayoutFormatOptions(), metrics: nil, views: dict)
-        let constraint4 =
-          NSLayoutConstraint.constraintsWithVisualFormat("H:|[mapImage]",
-            options: NSLayoutFormatOptions(), metrics: nil, views: dict)
-        
-        self.screenScrollView.addConstraints(constraint3)
-        self.screenScrollView.addConstraints(constraint4)
-        
-        
-        
-        
     
-        let c1 =
+        let pageControlCenter =
           NSLayoutConstraint(item: self.pageControl, attribute: .CenterX, relatedBy: .Equal,
             toItem: self.screenScrollView, attribute: .CenterX, multiplier: 1.0, constant: 0)
         
-        let c2 =
+        let pageControlTop =
           NSLayoutConstraint(item: self.pageControl, attribute: .Top, relatedBy: .Equal,
             toItem: self.slideShow,attribute: .Bottom, multiplier: 1.0, constant: 0)
         
-        self.screenScrollView.addConstraints([c1,c2])
-
+        self.screenScrollView.addConstraints([pageControlCenter,pageControlTop])
+        
+        let mapImageWidth =
+          NSLayoutConstraint(item: self.mapImage, attribute: .Width, relatedBy: .Equal,
+            toItem: screenScrollView, attribute: .Width, multiplier: 1.0, constant: -20)
+        
+        let mapImageTop =
+        NSLayoutConstraint(item: self.mapImage, attribute: .Top, relatedBy: .Equal,
+            toItem: pageControl, attribute: .Bottom, multiplier: 1.0, constant: 10)
+        
+        let mapImageCenterX =
+        NSLayoutConstraint(item: self.mapImage, attribute: .CenterX, relatedBy: .Equal,
+            toItem: screenScrollView, attribute: .CenterX, multiplier: 1.0, constant: 0)
+        
+        let mapImageHeight =
+        NSLayoutConstraint(item: self.mapImage, attribute: .Height, relatedBy: .Equal,
+            toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: mapViewImageHeight)
+        
+        self.screenScrollView.addConstraints([mapImageWidth, mapImageTop,mapImageHeight, mapImageCenterX])
+        
         self.mapImage.image =
-            UIImage.scaleUIImageToSize(UIImage(named: "copperhead16to9ratio")!,
-            size: CGSize(width: screenWidth, height: 200.0))
+            UIImage.scaleUIImageToSize(UIImage(named: "copperheadMap")!,
+            size: CGSize(width: screenWidth, height: mapViewImageHeight))
         
         
         var currentView: UIView = self.mapImage
