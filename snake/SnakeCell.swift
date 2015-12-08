@@ -25,7 +25,7 @@ class SnakeCell: UITableViewCell {
         var detail = UILabel()
         detail.translatesAutoresizingMaskIntoConstraints = false
         detail.textColor = UIColor(colorLiteralRed: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        detail.font = UIFont(name: "Arial-ItalicMT", size: 20.0)
+        detail.font = UIFont(name: "Arial-ItalicMT", size: 16.0)
         return detail
     }()
     
@@ -41,7 +41,7 @@ class SnakeCell: UITableViewCell {
         self.label.text = snake.commonName
         self.detailLabel.text = snake.scientificName
         
-     // self.bImage =  snake.primaryImage!
+        // self.bImage =  snake.primaryImage!
         // self.bImage =  UIImage(named: "northern_copperhead")!
         print(snake.commonName)
         self.bImage =  snake.primaryImage!
@@ -64,31 +64,36 @@ class SnakeCell: UITableViewCell {
     
     func setLayout() {
         
-        
         let imageView1 = UIImageView(image: bImage)
-        
         
         imageView1.translatesAutoresizingMaskIntoConstraints = false
         imageView1.contentMode = UIViewContentMode.ScaleToFill
+        
         let dict = ["image": imageView1, "label": label, "detailLabel": detailLabel]
+        
         self.addSubview(imageView1)
         self.addSubview(label)
         self.addSubview(detailLabel)
         
         let c1 =
-          NSLayoutConstraint.constraintsWithVisualFormat("V:|[image]|", options: NSLayoutFormatOptions(), metrics: nil, views: dict)
+          NSLayoutConstraint.constraintsWithVisualFormat("V:|[image]|",
+            options: NSLayoutFormatOptions(), metrics: nil, views: dict)
         
         let c2 =
-          NSLayoutConstraint.constraintsWithVisualFormat("H:|[image]|", options: NSLayoutFormatOptions(), metrics: nil, views: dict)
+          NSLayoutConstraint.constraintsWithVisualFormat("H:|[image]|",
+            options: NSLayoutFormatOptions(), metrics: nil, views: dict)
         
         let cl1 =
-          NSLayoutConstraint.constraintsWithVisualFormat("V:[label][detailLabel]-|", options: NSLayoutFormatOptions(), metrics: nil, views: dict)
+          NSLayoutConstraint.constraintsWithVisualFormat("V:[label][detailLabel]-|",
+            options: NSLayoutFormatOptions(), metrics: nil, views: dict)
         
         let cl2 =
-          NSLayoutConstraint.constraintsWithVisualFormat("H:|-[label]", options: NSLayoutFormatOptions(), metrics: nil, views: dict)
+          NSLayoutConstraint.constraintsWithVisualFormat("H:|-[label]",
+            options: NSLayoutFormatOptions(), metrics: nil, views: dict)
         
         let cl3 =
-          NSLayoutConstraint.constraintsWithVisualFormat("H:|-[detailLabel]", options: NSLayoutFormatOptions(), metrics: nil, views: dict)
+          NSLayoutConstraint.constraintsWithVisualFormat("H:|-[detailLabel]",
+            options: NSLayoutFormatOptions(), metrics: nil, views: dict)
         
         self.addConstraints(cl1)
         self.addConstraints(cl2)
@@ -96,8 +101,6 @@ class SnakeCell: UITableViewCell {
         self.addConstraints(c1)
         self.addConstraints(c2)
         self.addConstraints(cl3)
-        
-        //print(bImage.size)
         
     }
 }

@@ -26,6 +26,7 @@ class Snake {
         self.commonName = commonName
         self.scientificName = scientificName
         self.primaryImage = UIImage(named: primaryImage)
+       
     }
     
    

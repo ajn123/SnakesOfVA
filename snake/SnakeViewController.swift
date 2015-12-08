@@ -10,6 +10,11 @@ import UIKit
 
 class SnakeViewController: UIViewController {
     
+    let titleLabelVerticalDistance: CGFloat = 10
+    let detailLabelVerticalDistance: CGFloat = 2
+    
+    let textTitles = ["Description", "Wherabouts"]
+    
     var screenWidth: CGFloat {
         return UIScreen.mainScreen().bounds.width
     }
@@ -45,6 +50,7 @@ class SnakeViewController: UIViewController {
     
     lazy var screenScrollView: UIScrollView = {
         var screen = UIScrollView(frame: UIScreen.mainScreen().bounds)
+        
         return screen
     }()
     
@@ -52,6 +58,8 @@ class SnakeViewController: UIViewController {
         self.view.backgroundColor = UIColor.blackColor()
         
         self.edgesForExtendedLayout = UIRectEdge.Bottom.intersect(UIRectEdge.Top)
+        
+        self.view.addSubview(screenScrollView)
         
         var x: CGFloat = 0.0
 
@@ -65,7 +73,6 @@ class SnakeViewController: UIViewController {
             x = x + screenWidth
         }
         
-        self.view.addSubview(screenScrollView)
         slideShow.contentSize = CGSize(width: x, height: 200.0)
         
         self.screenScrollView.addSubview(slideShow)
@@ -79,7 +86,7 @@ class SnakeViewController: UIViewController {
         
         let pageControlTop =
           NSLayoutConstraint(item: self.pageControl, attribute: .Top, relatedBy: .Equal,
-            toItem: self.slideShow,attribute: .Bottom, multiplier: 1.0, constant: 0)
+            toItem: self.slideShow, attribute: .Bottom, multiplier: 1.0, constant: 0)
         
         self.screenScrollView.addConstraints([pageControlCenter,pageControlTop])
         
@@ -89,7 +96,7 @@ class SnakeViewController: UIViewController {
         
         let mapImageTop =
         NSLayoutConstraint(item: self.mapImage, attribute: .Top, relatedBy: .Equal,
-            toItem: pageControl, attribute: .Bottom, multiplier: 1.0, constant: 10)
+            toItem: pageControl, attribute: .Bottom, multiplier: 1.0, constant: titleLabelVerticalDistance)
         
         let mapImageCenterX =
         NSLayoutConstraint(item: self.mapImage, attribute: .CenterX, relatedBy: .Equal,
@@ -105,11 +112,9 @@ class SnakeViewController: UIViewController {
             UIImage.scaleUIImageToSize(UIImage(named: "copperheadMap")!,
             size: CGSize(width: screenWidth, height: mapViewImageHeight))
         
-        
         var currentView: UIView = self.mapImage
-        var height: CGFloat = 450.0
         
-        for _ in 1...3 {
+        for index in 0..<self.textTitles.count {
             let label = UILabel()
             label.translatesAutoresizingMaskIntoConstraints = false
             
@@ -120,23 +125,23 @@ class SnakeViewController: UIViewController {
             
             label.textColor = UIColor.whiteColor()
             
-            label.text = "DETAILS HERE"
+            label.text = textTitles[index]
             detailLabel.textColor = UIColor.whiteColor()
             
-            detailLabel.text = "lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-            
+            detailLabel.text = NSLocalizedString("cornSnakeDescription", comment: "description")
+                
             detailLabel.font = UIFont(name: "Avenir-Book", size: 16.0)
             
             detailLabel.numberOfLines = 0
-            self.view.addSubview(label)
-            self.view.addSubview(detailLabel)
+            self.screenScrollView.addSubview(label)
+            self.screenScrollView.addSubview(detailLabel)
 
             
             let titleConstraint = NSLayoutConstraint(item: label, attribute: .Top, relatedBy: .Equal,
-                toItem: currentView, attribute: .Bottom, multiplier: 1, constant: 10)
+                toItem: currentView, attribute: .Bottom, multiplier: 1, constant: titleLabelVerticalDistance)
             
             let detailConstraint = NSLayoutConstraint(item: detailLabel, attribute: .Top, relatedBy: .Equal,
-                toItem: label, attribute: .Bottom, multiplier: 1, constant: 2)
+                toItem: label, attribute: .Bottom, multiplier: 1, constant: detailLabelVerticalDistance)
             
             let widthConstraint = NSLayoutConstraint(item: label, attribute: .Width, relatedBy: .Equal,
                 toItem: self.screenScrollView, attribute: .Width, multiplier: 1.0, constant: -5.0)
@@ -150,7 +155,7 @@ class SnakeViewController: UIViewController {
                 toItem: screenScrollView, attribute: .Left, multiplier: 1.0, constant: 5)
             
             let rightConstraint2 =
-            NSLayoutConstraint(item: label, attribute: .Left, relatedBy: .Equal,
+              NSLayoutConstraint(item: label, attribute: .Left, relatedBy: .Equal,
                 toItem: screenScrollView, attribute: .Left, multiplier: 1.0, constant: 5)
             
             self.view.addConstraints([titleConstraint, detailConstraint])
@@ -159,13 +164,20 @@ class SnakeViewController: UIViewController {
            
             currentView = detailLabel
         }
-        
-        screenScrollView.contentSize =
-            CGSize(width: screenWidth, height: 1500.0)
-        
     }
     
     
+    override func viewDidAppear(animated: Bool) {
+        var height: CGFloat = 0.0
+        for item in screenScrollView.subviews {
+            height += item.bounds.height
+        }
+        height += CGFloat((self.navigationController?.navigationBar.bounds.height)! +
+            UIApplication.sharedApplication().statusBarFrame.size.height)
+        height += ((titleLabelVerticalDistance + detailLabelVerticalDistance) * CGFloat(self.textTitles.count)) +
+            titleLabelVerticalDistance
+        screenScrollView.contentSize = CGSize(width: screenWidth, height: height)
+    }
     
 }
 

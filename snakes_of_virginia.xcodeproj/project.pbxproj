@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21BACCFC1C15827E009823BD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 21BACCFE1C15827E009823BD /* Localizable.strings */; };
 		21CC23AD1C083BF3003EBA8C /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CC23AC1C083BF3003EBA8C /* UIImageExtension.swift */; };
 		A34AE7051BF260AC00FBBB19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34AE7041BF260AC00FBBB19 /* AppDelegate.swift */; };
 		A34AE7071BF260AC00FBBB19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34AE7061BF260AC00FBBB19 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		21BACCFD1C15827E009823BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		21CC23AC1C083BF3003EBA8C /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		A34AE7011BF260AC00FBBB19 /* snake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = snake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A34AE7041BF260AC00FBBB19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				A34AE7181BF267D900FBBB19 /* SnakesManager.swift */,
 				A3777E9C1BFB949F00252EE6 /* SnakeCell.swift */,
 				A3777E9E1BFBA6DE00252EE6 /* SnakeViewController.swift */,
+				21BACCFE1C15827E009823BD /* Localizable.strings */,
 			);
 			path = snake;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 			files = (
 				A34AE70F1BF260AC00FBBB19 /* LaunchScreen.storyboard in Resources */,
 				A34AE70C1BF260AC00FBBB19 /* Assets.xcassets in Resources */,
+				21BACCFC1C15827E009823BD /* Localizable.strings in Resources */,
 				A34AE70A1BF260AC00FBBB19 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -172,6 +176,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		21BACCFE1C15827E009823BD /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21BACCFD1C15827E009823BD /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		A34AE7081BF260AC00FBBB19 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
