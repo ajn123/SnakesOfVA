@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import iOS_Slide_Menu
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,7 +15,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(application: UIApplication,
+         didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+      
+      window = UIWindow(frame: UIScreen.mainScreen().bounds)
+      window?.backgroundColor = UIColor.whiteColor()
+          
+      var slideNavVC = SlideNavigationController(rootViewController: ViewController())
+
+      window?.rootViewController = slideNavVC
+          
+      SlideNavigationController.sharedInstance().leftMenu = UINavigationController(rootViewController: MenuViewController())
+          
+      SlideNavigationController.sharedInstance().leftBarButtonItem =
+        UIBarButtonItem(title: "Menu", style: .Plain,
+          target: SlideNavigationController.sharedInstance(),
+          action: "toggleLeftMenu")
+      
+      
+      window?.makeKeyAndVisible()
         // Override point for customization after application launch.
         return true
     }

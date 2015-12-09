@@ -7,14 +7,28 @@
 //
 
 import UIKit
+import iOS_Slide_Menu
 
-class ViewController: UITableViewController {
+class ViewController: UITableViewController, SlideNavigationControllerDelegate {
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-        self.tableView.registerClass(SnakeCell.self, forCellReuseIdentifier: "snakeCell")
-        // Do any additional setup after loading the view, typically from a nib.
+      super.viewDidLoad()
+      self.title = "Snakes Of VA"
+      // remove back button title
+      self.navigationItem.backBarButtonItem =
+        UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
+    
+      self.tableView.registerClass(SnakeCell.self, forCellReuseIdentifier: "snakeCell")
+
     }
+  
+  func slideNavigationControllerShouldDisplayLeftMenu() -> Bool {
+    return true
+  }
+  
+  func slideNavigationControllerShouldDisplayRightMenu() -> Bool {
+    return true
+  }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

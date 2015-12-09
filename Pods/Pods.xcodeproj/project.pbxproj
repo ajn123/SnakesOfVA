@@ -1,0 +1,579 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		21187EECA096873E0186F5B7AD2C31C5 /* SlideNavigationContorllerAnimatorSlide.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FF53336DFE01DD97996DE1B29CA316 /* SlideNavigationContorllerAnimatorSlide.m */; };
+		2B0BE6E66CD0A96AA4EE032B3C42206B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503FF3B34F47AC269E6D6C8B6843CA6D /* UIKit.framework */; };
+		30A7DC1C63C248E017D4CF9A1E4A84C8 /* iOS-Slide-Menu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 99C84D96C173D9BE9582AB959B54EEBC /* iOS-Slide-Menu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		348441AC25DD4FD2B3FBB989AEF98F48 /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */ = {isa = PBXBuildFile; fileRef = FE384809BFE3344599C3534BD7B8DBDB /* SlideNavigationContorllerAnimatorSlideAndFade.m */; };
+		35720F54556B9F53A0DD23B47F76313D /* SlideNavigationContorllerAnimatorSlideAndFade.h in Headers */ = {isa = PBXBuildFile; fileRef = BEEC0A6B2C33CE7EF03553841D722799 /* SlideNavigationContorllerAnimatorSlideAndFade.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4210B9FF5C59E5AAD28CCC70B401C651 /* SlideNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2893304B600E752CF074B757663A6D73 /* SlideNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6A6F1122AE948B235FBD44073A126D79 /* SlideNavigationContorllerAnimatorFade.h in Headers */ = {isa = PBXBuildFile; fileRef = FFC4A22E7D485CF9F00AB575989C4CC8 /* SlideNavigationContorllerAnimatorFade.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8270E3B2FAF10DB3BE1FB6FDCCFA25A2 /* SlideNavigationContorllerAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DE0B6D222C408C3E97B296F406F03EC /* SlideNavigationContorllerAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A7A7D4E824DC613ED8D4FC9CB03CCF4 /* Pods-snake-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A48100C88C521CB927E757DA823F84 /* Pods-snake-dummy.m */; };
+		9A1020333DD95E48BE1B66E3D0B043BF /* menu-button.png in Resources */ = {isa = PBXBuildFile; fileRef = D9B470636DD3228317651640960A3CB3 /* menu-button.png */; };
+		AD57AE9FD2D0E04473244E393A53C54D /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4D0B6D17ED8CDCFCD1980E47E864F2 /* SlideNavigationContorllerAnimatorScaleAndFade.m */; };
+		AE98CAE3EC36735404703F02B344618E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0A28806F08E344240D038AB2EB1AEC9 /* Foundation.framework */; };
+		C270C020D0D16014B8BFE9DDB68884CF /* SlideNavigationContorllerAnimatorScaleAndFade.h in Headers */ = {isa = PBXBuildFile; fileRef = 0120DB39D91C53757ED6E6BA0011E9BB /* SlideNavigationContorllerAnimatorScaleAndFade.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C46DAE7CEEB1F2DF0C34A202645358F6 /* menu-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5252D91C2569B68DAEAED5B2B4C083B7 /* menu-button@2x.png */; };
+		C9D6150D26261C71300F6111EDDE8267 /* iOS-Slide-Menu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FAFE5C3BB31444107E4F03B71648A2 /* iOS-Slide-Menu-dummy.m */; };
+		D69D69ECC29CF4395BAF9CAEB5FE5CF5 /* SlideNavigationContorllerAnimatorSlide.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B156020D23F5F185700DA44F75C15E3 /* SlideNavigationContorllerAnimatorSlide.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D798288286901CB51C6BB1B6A4DE142B /* SlideNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF754DA77A1B52B3748BF3906022C76 /* SlideNavigationController.m */; };
+		D966A5C4AD720775AC31B83CA16633E1 /* Pods-snake-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FC801E2BB107CFEA155238C94821C87 /* Pods-snake-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE88D96861E1F83079BA6920EF2BE7A3 /* SlideNavigationContorllerAnimatorFade.m in Sources */ = {isa = PBXBuildFile; fileRef = C499447284C693DCFB9E805F4B38B286 /* SlideNavigationContorllerAnimatorFade.m */; };
+		ED315C689801D8DF256F4F68333FC217 /* SlideNavigationContorllerAnimatorScale.m in Sources */ = {isa = PBXBuildFile; fileRef = 7403D624CB1DD39F08E8579B49FEE3E4 /* SlideNavigationContorllerAnimatorScale.m */; };
+		F54B9F95BF6D32EAED63517BECF140FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0A28806F08E344240D038AB2EB1AEC9 /* Foundation.framework */; };
+		F64B24FEFF0CD1C8433FB851D94C56E9 /* SlideNavigationContorllerAnimatorScale.h in Headers */ = {isa = PBXBuildFile; fileRef = BF986B624AC15E0D7450598B18ACC460 /* SlideNavigationContorllerAnimatorScale.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BBE951F41DD97FA9517E455AF99423B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6F4DA18E7DE325207539106715F91357;
+			remoteInfo = "iOS-Slide-Menu";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0120DB39D91C53757ED6E6BA0011E9BB /* SlideNavigationContorllerAnimatorScaleAndFade.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SlideNavigationContorllerAnimatorScaleAndFade.h; path = SlideMenu/Source/Animations/SlideNavigationContorllerAnimatorScaleAndFade.h; sourceTree = "<group>"; };
+		030205B8282BDD8DAF41F44B1F0DE77F /* Pods-snake-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-snake-frameworks.sh"; sourceTree = "<group>"; };
+		0F4D406110E4B695A5CBBB63E002DE62 /* Pods-snake-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-snake-resources.sh"; sourceTree = "<group>"; };
+		2893304B600E752CF074B757663A6D73 /* SlideNavigationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SlideNavigationController.h; path = SlideMenu/Source/SlideNavigationController.h; sourceTree = "<group>"; };
+		2B50551B3F53A3760412CF197E545589 /* iOS-Slide-Menu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "iOS-Slide-Menu.modulemap"; sourceTree = "<group>"; };
+		34722DF2E104CA6018FDA64BBA49D969 /* Pods-snake-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-snake-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3716B307CA65B4EA354CBAFE614E2B3B /* iOS-Slide-Menu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iOS-Slide-Menu-prefix.pch"; sourceTree = "<group>"; };
+		4C69EAFF559E2657CAEDAB8743D8E042 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		503FF3B34F47AC269E6D6C8B6843CA6D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		5252D91C2569B68DAEAED5B2B4C083B7 /* menu-button@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "menu-button@2x.png"; path = "SlideMenu/Source/Assets/menu-button@2x.png"; sourceTree = "<group>"; };
+		6DE0B6D222C408C3E97B296F406F03EC /* SlideNavigationContorllerAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SlideNavigationContorllerAnimator.h; path = SlideMenu/Source/Animations/SlideNavigationContorllerAnimator.h; sourceTree = "<group>"; };
+		6FC801E2BB107CFEA155238C94821C87 /* Pods-snake-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-snake-umbrella.h"; sourceTree = "<group>"; };
+		72FAFE5C3BB31444107E4F03B71648A2 /* iOS-Slide-Menu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iOS-Slide-Menu-dummy.m"; sourceTree = "<group>"; };
+		7403D624CB1DD39F08E8579B49FEE3E4 /* SlideNavigationContorllerAnimatorScale.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SlideNavigationContorllerAnimatorScale.m; path = SlideMenu/Source/Animations/SlideNavigationContorllerAnimatorScale.m; sourceTree = "<group>"; };
+		749398E3432498A35264F24F40FD3CB7 /* iOS-Slide-Menu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "iOS-Slide-Menu.xcconfig"; sourceTree = "<group>"; };
+		7B156020D23F5F185700DA44F75C15E3 /* SlideNavigationContorllerAnimatorSlide.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SlideNavigationContorllerAnimatorSlide.h; path = SlideMenu/Source/Animations/SlideNavigationContorllerAnimatorSlide.h; sourceTree = "<group>"; };
+		83EF566EBD5D98862DB36F52A69DAF9A /* Pods-snake.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-snake.modulemap"; sourceTree = "<group>"; };
+		8ACFC1BEC4DA484F472C585DF5A7757D /* iOS-Slide-Menu-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "iOS-Slide-Menu-Private.xcconfig"; sourceTree = "<group>"; };
+		90A301FBF4F58F8B8F118189CAAE4B3B /* iOS_Slide_Menu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iOS_Slide_Menu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		94A48100C88C521CB927E757DA823F84 /* Pods-snake-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-snake-dummy.m"; sourceTree = "<group>"; };
+		993BFC0043525184147219D7EEB282E0 /* Pods-snake.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-snake.release.xcconfig"; sourceTree = "<group>"; };
+		99C84D96C173D9BE9582AB959B54EEBC /* iOS-Slide-Menu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iOS-Slide-Menu-umbrella.h"; sourceTree = "<group>"; };
+		9D989F0723AA15BAE12993FFCD7709FE /* Pods-snake.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-snake.debug.xcconfig"; sourceTree = "<group>"; };
+		A2B2D7F3E2CE21D5C45F6F23069FAFD0 /* Pods_snake.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_snake.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5FF53336DFE01DD97996DE1B29CA316 /* SlideNavigationContorllerAnimatorSlide.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SlideNavigationContorllerAnimatorSlide.m; path = SlideMenu/Source/Animations/SlideNavigationContorllerAnimatorSlide.m; sourceTree = "<group>"; };
+		ABA6D40A8792BCD040C3DC02A0F7F6F6 /* Pods-snake-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-snake-acknowledgements.plist"; sourceTree = "<group>"; };
+		B5F3B68375B11DB966115EBC266A6AE9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEEC0A6B2C33CE7EF03553841D722799 /* SlideNavigationContorllerAnimatorSlideAndFade.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SlideNavigationContorllerAnimatorSlideAndFade.h; path = SlideMenu/Source/Animations/SlideNavigationContorllerAnimatorSlideAndFade.h; sourceTree = "<group>"; };
+		BF986B624AC15E0D7450598B18ACC460 /* SlideNavigationContorllerAnimatorScale.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SlideNavigationContorllerAnimatorScale.h; path = SlideMenu/Source/Animations/SlideNavigationContorllerAnimatorScale.h; sourceTree = "<group>"; };
+		C499447284C693DCFB9E805F4B38B286 /* SlideNavigationContorllerAnimatorFade.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SlideNavigationContorllerAnimatorFade.m; path = SlideMenu/Source/Animations/SlideNavigationContorllerAnimatorFade.m; sourceTree = "<group>"; };
+		C88113A79685B4EFEE7BAD12896829F7 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		CAF754DA77A1B52B3748BF3906022C76 /* SlideNavigationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SlideNavigationController.m; path = SlideMenu/Source/SlideNavigationController.m; sourceTree = "<group>"; };
+		D9B470636DD3228317651640960A3CB3 /* menu-button.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "menu-button.png"; path = "SlideMenu/Source/Assets/menu-button.png"; sourceTree = "<group>"; };
+		E0A28806F08E344240D038AB2EB1AEC9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		FB4D0B6D17ED8CDCFCD1980E47E864F2 /* SlideNavigationContorllerAnimatorScaleAndFade.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SlideNavigationContorllerAnimatorScaleAndFade.m; path = SlideMenu/Source/Animations/SlideNavigationContorllerAnimatorScaleAndFade.m; sourceTree = "<group>"; };
+		FE384809BFE3344599C3534BD7B8DBDB /* SlideNavigationContorllerAnimatorSlideAndFade.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SlideNavigationContorllerAnimatorSlideAndFade.m; path = SlideMenu/Source/Animations/SlideNavigationContorllerAnimatorSlideAndFade.m; sourceTree = "<group>"; };
+		FFC4A22E7D485CF9F00AB575989C4CC8 /* SlideNavigationContorllerAnimatorFade.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SlideNavigationContorllerAnimatorFade.h; path = SlideMenu/Source/Animations/SlideNavigationContorllerAnimatorFade.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6F47E30DF98B199252C535C51467C27B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F54B9F95BF6D32EAED63517BECF140FF /* Foundation.framework in Frameworks */,
+				2B0BE6E66CD0A96AA4EE032B3C42206B /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE17994B4CBC58041622E6898B26EC0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE98CAE3EC36735404703F02B344618E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D633048F8F7B2A5EFE1C23FAF532161 /* iOS-Slide-Menu */ = {
+			isa = PBXGroup;
+			children = (
+				6DE0B6D222C408C3E97B296F406F03EC /* SlideNavigationContorllerAnimator.h */,
+				FFC4A22E7D485CF9F00AB575989C4CC8 /* SlideNavigationContorllerAnimatorFade.h */,
+				C499447284C693DCFB9E805F4B38B286 /* SlideNavigationContorllerAnimatorFade.m */,
+				BF986B624AC15E0D7450598B18ACC460 /* SlideNavigationContorllerAnimatorScale.h */,
+				7403D624CB1DD39F08E8579B49FEE3E4 /* SlideNavigationContorllerAnimatorScale.m */,
+				0120DB39D91C53757ED6E6BA0011E9BB /* SlideNavigationContorllerAnimatorScaleAndFade.h */,
+				FB4D0B6D17ED8CDCFCD1980E47E864F2 /* SlideNavigationContorllerAnimatorScaleAndFade.m */,
+				7B156020D23F5F185700DA44F75C15E3 /* SlideNavigationContorllerAnimatorSlide.h */,
+				A5FF53336DFE01DD97996DE1B29CA316 /* SlideNavigationContorllerAnimatorSlide.m */,
+				BEEC0A6B2C33CE7EF03553841D722799 /* SlideNavigationContorllerAnimatorSlideAndFade.h */,
+				FE384809BFE3344599C3534BD7B8DBDB /* SlideNavigationContorllerAnimatorSlideAndFade.m */,
+				2893304B600E752CF074B757663A6D73 /* SlideNavigationController.h */,
+				CAF754DA77A1B52B3748BF3906022C76 /* SlideNavigationController.m */,
+				E11DAE15DA1866A93859086371FAFC45 /* Resources */,
+				C8B0A11665D33EC73C69E8559BFE7DBF /* Support Files */,
+			);
+			path = "iOS-Slide-Menu";
+			sourceTree = "<group>";
+		};
+		21FF83D38BE2E1D5499360B06000D8F3 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				E0A28806F08E344240D038AB2EB1AEC9 /* Foundation.framework */,
+				503FF3B34F47AC269E6D6C8B6843CA6D /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5E1F3384B1B39575144FEBFCF3210CCC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				21FF83D38BE2E1D5499360B06000D8F3 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				C88113A79685B4EFEE7BAD12896829F7 /* Podfile */,
+				5E1F3384B1B39575144FEBFCF3210CCC /* Frameworks */,
+				FCC6F965540745142F6675EF7C9E0E2D /* Pods */,
+				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
+				848A6CE8DA3504A266A17F635DC3683A /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		848A6CE8DA3504A266A17F635DC3683A /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AA085D85113D7086471F02CB5A4FDB81 /* Pods-snake */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		AA085D85113D7086471F02CB5A4FDB81 /* Pods-snake */ = {
+			isa = PBXGroup;
+			children = (
+				B5F3B68375B11DB966115EBC266A6AE9 /* Info.plist */,
+				83EF566EBD5D98862DB36F52A69DAF9A /* Pods-snake.modulemap */,
+				34722DF2E104CA6018FDA64BBA49D969 /* Pods-snake-acknowledgements.markdown */,
+				ABA6D40A8792BCD040C3DC02A0F7F6F6 /* Pods-snake-acknowledgements.plist */,
+				94A48100C88C521CB927E757DA823F84 /* Pods-snake-dummy.m */,
+				030205B8282BDD8DAF41F44B1F0DE77F /* Pods-snake-frameworks.sh */,
+				0F4D406110E4B695A5CBBB63E002DE62 /* Pods-snake-resources.sh */,
+				6FC801E2BB107CFEA155238C94821C87 /* Pods-snake-umbrella.h */,
+				9D989F0723AA15BAE12993FFCD7709FE /* Pods-snake.debug.xcconfig */,
+				993BFC0043525184147219D7EEB282E0 /* Pods-snake.release.xcconfig */,
+			);
+			name = "Pods-snake";
+			path = "Target Support Files/Pods-snake";
+			sourceTree = "<group>";
+		};
+		C8B0A11665D33EC73C69E8559BFE7DBF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4C69EAFF559E2657CAEDAB8743D8E042 /* Info.plist */,
+				2B50551B3F53A3760412CF197E545589 /* iOS-Slide-Menu.modulemap */,
+				749398E3432498A35264F24F40FD3CB7 /* iOS-Slide-Menu.xcconfig */,
+				8ACFC1BEC4DA484F472C585DF5A7757D /* iOS-Slide-Menu-Private.xcconfig */,
+				72FAFE5C3BB31444107E4F03B71648A2 /* iOS-Slide-Menu-dummy.m */,
+				3716B307CA65B4EA354CBAFE614E2B3B /* iOS-Slide-Menu-prefix.pch */,
+				99C84D96C173D9BE9582AB959B54EEBC /* iOS-Slide-Menu-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/iOS-Slide-Menu";
+			sourceTree = "<group>";
+		};
+		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A2B2D7F3E2CE21D5C45F6F23069FAFD0 /* Pods_snake.framework */,
+				90A301FBF4F58F8B8F118189CAAE4B3B /* iOS_Slide_Menu.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E11DAE15DA1866A93859086371FAFC45 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D9B470636DD3228317651640960A3CB3 /* menu-button.png */,
+				5252D91C2569B68DAEAED5B2B4C083B7 /* menu-button@2x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		FCC6F965540745142F6675EF7C9E0E2D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1D633048F8F7B2A5EFE1C23FAF532161 /* iOS-Slide-Menu */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1600964C978CEEF064B709CE93FF3A65 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8270E3B2FAF10DB3BE1FB6FDCCFA25A2 /* SlideNavigationContorllerAnimator.h in Headers */,
+				6A6F1122AE948B235FBD44073A126D79 /* SlideNavigationContorllerAnimatorFade.h in Headers */,
+				F64B24FEFF0CD1C8433FB851D94C56E9 /* SlideNavigationContorllerAnimatorScale.h in Headers */,
+				C270C020D0D16014B8BFE9DDB68884CF /* SlideNavigationContorllerAnimatorScaleAndFade.h in Headers */,
+				D69D69ECC29CF4395BAF9CAEB5FE5CF5 /* SlideNavigationContorllerAnimatorSlide.h in Headers */,
+				35720F54556B9F53A0DD23B47F76313D /* SlideNavigationContorllerAnimatorSlideAndFade.h in Headers */,
+				4210B9FF5C59E5AAD28CCC70B401C651 /* SlideNavigationController.h in Headers */,
+				30A7DC1C63C248E017D4CF9A1E4A84C8 /* iOS-Slide-Menu-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85DE7F01264C99CBC0E01D79A98A3C63 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D966A5C4AD720775AC31B83CA16633E1 /* Pods-snake-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		6F4DA18E7DE325207539106715F91357 /* iOS-Slide-Menu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A34A0ED5E632FAF91C30C9BEDD0158A9 /* Build configuration list for PBXNativeTarget "iOS-Slide-Menu" */;
+			buildPhases = (
+				3D4E594F82492E111C5DC57D687E4929 /* Sources */,
+				6F47E30DF98B199252C535C51467C27B /* Frameworks */,
+				1600964C978CEEF064B709CE93FF3A65 /* Headers */,
+				59BB52B578251C76382343999611BA52 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iOS-Slide-Menu";
+			productName = "iOS-Slide-Menu";
+			productReference = 90A301FBF4F58F8B8F118189CAAE4B3B /* iOS_Slide_Menu.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CBD5D2656DACBDE34C543DA58D9430DE /* Pods-snake */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 788C16D42CC60C6E4FBAE0587350F0DE /* Build configuration list for PBXNativeTarget "Pods-snake" */;
+			buildPhases = (
+				31B35D6FBC94AC1131384F0D60999468 /* Sources */,
+				DE17994B4CBC58041622E6898B26EC0C /* Frameworks */,
+				85DE7F01264C99CBC0E01D79A98A3C63 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1EAAC04F5671D7084F040747E49E6434 /* PBXTargetDependency */,
+			);
+			name = "Pods-snake";
+			productName = "Pods-snake";
+			productReference = A2B2D7F3E2CE21D5C45F6F23069FAFD0 /* Pods_snake.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = CCA510CFBEA2D207524CDA0D73C3B561 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CBD5D2656DACBDE34C543DA58D9430DE /* Pods-snake */,
+				6F4DA18E7DE325207539106715F91357 /* iOS-Slide-Menu */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		59BB52B578251C76382343999611BA52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A1020333DD95E48BE1B66E3D0B043BF /* menu-button.png in Resources */,
+				C46DAE7CEEB1F2DF0C34A202645358F6 /* menu-button@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		31B35D6FBC94AC1131384F0D60999468 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A7A7D4E824DC613ED8D4FC9CB03CCF4 /* Pods-snake-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D4E594F82492E111C5DC57D687E4929 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE88D96861E1F83079BA6920EF2BE7A3 /* SlideNavigationContorllerAnimatorFade.m in Sources */,
+				ED315C689801D8DF256F4F68333FC217 /* SlideNavigationContorllerAnimatorScale.m in Sources */,
+				AD57AE9FD2D0E04473244E393A53C54D /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */,
+				21187EECA096873E0186F5B7AD2C31C5 /* SlideNavigationContorllerAnimatorSlide.m in Sources */,
+				348441AC25DD4FD2B3FBB989AEF98F48 /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */,
+				D798288286901CB51C6BB1B6A4DE142B /* SlideNavigationController.m in Sources */,
+				C9D6150D26261C71300F6111EDDE8267 /* iOS-Slide-Menu-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1EAAC04F5671D7084F040747E49E6434 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "iOS-Slide-Menu";
+			target = 6F4DA18E7DE325207539106715F91357 /* iOS-Slide-Menu */;
+			targetProxy = BBE951F41DD97FA9517E455AF99423B4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		089C14F45B484B478F55DDBBE0BA2892 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8ACFC1BEC4DA484F472C585DF5A7757D /* iOS-Slide-Menu-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/iOS-Slide-Menu/iOS-Slide-Menu-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/iOS-Slide-Menu/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/iOS-Slide-Menu/iOS-Slide-Menu.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = iOS_Slide_Menu;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3A08E0A5102FBE7A1316C0669F86749B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 993BFC0043525184147219D7EEB282E0 /* Pods-snake.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-snake/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-snake/Pods-snake.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_snake;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4DEA33ED409578A9CC7772BA2493F07C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		6714950670CAA9F0C55F468667D43C97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B9FA4CB45856384F34F0455B93A877F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D989F0723AA15BAE12993FFCD7709FE /* Pods-snake.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-snake/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-snake/Pods-snake.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_snake;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C149E3FCB3D0FE2AA5AA868E7CF55D44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8ACFC1BEC4DA484F472C585DF5A7757D /* iOS-Slide-Menu-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/iOS-Slide-Menu/iOS-Slide-Menu-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/iOS-Slide-Menu/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/iOS-Slide-Menu/iOS-Slide-Menu.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = iOS_Slide_Menu;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DEA33ED409578A9CC7772BA2493F07C /* Debug */,
+				6714950670CAA9F0C55F468667D43C97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		788C16D42CC60C6E4FBAE0587350F0DE /* Build configuration list for PBXNativeTarget "Pods-snake" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9FA4CB45856384F34F0455B93A877F8 /* Debug */,
+				3A08E0A5102FBE7A1316C0669F86749B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A34A0ED5E632FAF91C30C9BEDD0158A9 /* Build configuration list for PBXNativeTarget "iOS-Slide-Menu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				089C14F45B484B478F55DDBBE0BA2892 /* Debug */,
+				C149E3FCB3D0FE2AA5AA868E7CF55D44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

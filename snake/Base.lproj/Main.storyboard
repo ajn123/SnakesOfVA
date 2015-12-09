@@ -1,36 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KoI-1B-99G">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
-    <scenes>
-        <!--Snakes of Virginia-->
-        <scene sceneID="DFm-mb-50L">
-            <objects>
-                <tableViewController id="G0O-51-B21" customClass="ViewController" customModule="snake" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="Snakes of Virginia" id="sc3-7f-GLc"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="soF-7U-3cZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="25" y="676"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Qio-3d-2Jr">
-            <objects>
-                <navigationController id="KoI-1B-99G" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lxq-18-dw9">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="G0O-51-B21" kind="relationship" relationship="rootViewController" id="Es6-NC-rnA"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="unv-x3-B0M" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-814" y="654"/>
-        </scene>
-    </scenes>
+    <scenes/>
 </document>
