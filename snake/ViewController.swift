@@ -15,20 +15,15 @@ class ViewController: UITableViewController, SlideNavigationControllerDelegate {
       super.viewDidLoad()
       self.title = "Snakes Of VA"
       // remove back button title
-      self.navigationItem.backBarButtonItem =
-        UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
-    
+      self.navigationItem.hidesBackButton = true
       self.tableView.registerClass(SnakeCell.self, forCellReuseIdentifier: "snakeCell")
-
+      
     }
   
   func slideNavigationControllerShouldDisplayLeftMenu() -> Bool {
     return true
   }
   
-  func slideNavigationControllerShouldDisplayRightMenu() -> Bool {
-    return true
-  }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
