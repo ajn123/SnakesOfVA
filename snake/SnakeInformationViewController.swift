@@ -12,28 +12,67 @@ import iOS_Slide_Menu
 class SnakeInformationViewController: UIViewController, SlideNavigationControllerDelegate {
   
   lazy var label: UILabel = {
-    var l = UILabel(frame: CGRect(x: 0, y: 0,
-      width: UIScreen.mainScreen().bounds.width, height: 50))
-    l.font = UIFont(name: "Avenir-Book", size: 16.0)
-    l.text = "YOLOEU oUE OEU OUE OEU OEU OEU OEU UOEuoe oeu aoe uaoeu aoe uao eu aoeu aoe ua oeu aoe u aoe uao e aoeu aoe aoe uoa eu aoeu oaeua uaoe uoaeuaoeu oeu oae oae ua  eao uo aua eoauoaeu aoue oue oe oeauoeu ueoa euoa uoea "
+    var l = UILabel()
+    l.font = UIFont(name: "Avenir-Book", size: 18.0)
+    l.translatesAutoresizingMaskIntoConstraints = false
     l.textColor = UIColor.whiteColor()
     l.numberOfLines = 0
     return l
   }()
   
-  override func viewDidLoad() {
-    self.view.backgroundColor = UIColor.blackColor()
+  lazy var screenScrollView: UIScrollView = {
+    var screen = UIScrollView(frame: UIScreen.mainScreen().bounds)
     
-    self.view.addSubview(label)
+    return screen
+  }()
+  
+  init(str: String) {
+    super.init(nibName: nil, bundle: nil)
+    
+    label.text = NSLocalizedString(str, comment: "content")
+  }
+
+  required init?(coder aDecoder: NSCoder) {
+      fatalError("init(coder:) has not been implemented")
+  }
+  
+
+  override func viewDidLoad() {
+    
+    
+    self.view.backgroundColor = UIColor.blackColor()
+    self.edgesForExtendedLayout = UIRectEdge.Bottom.intersect(UIRectEdge.Top)
+    
+    self.view.addSubview(screenScrollView)
+    
+    self.screenScrollView.addSubview(label)
     
     self.navigationItem.leftBarButtonItem =
       UIBarButtonItem(title: "Menu", style: .Plain,
         target: SlideNavigationController.sharedInstance(),
         action: "toggleLeftMenu")
+    
+    
+    let c1 = NSLayoutConstraint(item: label, attribute: .Top,
+      relatedBy: .Equal, toItem: self.screenScrollView, attribute: .Top, multiplier: 1.0,
+      constant: 5.0)
+    
+    let c2 = NSLayoutConstraint(item: label, attribute: .Width, relatedBy: .Equal,
+      toItem: self.screenScrollView, attribute: .Width, multiplier: 1.0, constant: -5)
+    
+    let c3 = NSLayoutConstraint(item: label, attribute: .Left, relatedBy: .Equal,
+      toItem: self.screenScrollView, attribute: .Left, multiplier: 1.0, constant: 10.0)
+    
+    self.screenScrollView.addConstraints([c1,c2,c3])
+    
   }
   
   func slideNavigationControllerShouldDisplayLeftMenu() -> Bool {
     return true
+  }
+  
+  override func viewDidAppear(animated: Bool) {
+    screenScrollView.contentSize = CGSize(width: screenWidth, height: label.bounds.height + statusBarHeight + 5.0)
   }
   
 }

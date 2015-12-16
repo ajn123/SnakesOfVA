@@ -12,8 +12,11 @@ import iOS_Slide_Menu
 class MenuViewController: UITableViewController {
   
   
-  let menuItems = ["Snakes of Virginia", "About Snakes", "Snake Conservation",
-                   "Snake Bite", "FAQ", "About"]
+  let menuItems = ["Snakes of Virginia", "About Snakes","Snake Identification",
+    "Snake Conservation", "Snake Bite", "FAQ",]
+  
+  let localizedStrings = ["", "Snakes_About", "Snake_Identification_Tips",
+    "Snake_Conservation", "Snake_Bite", "Living_With_Snakes"]
   
   
   override func viewDidLoad() {
@@ -57,7 +60,8 @@ class MenuViewController: UITableViewController {
           ViewController(), withCompletion: nil)
       }
     default:
-        SlideNavigationController.sharedInstance().popAllAndSwitchToViewController(SnakeInformationViewController(), withCompletion: nil)
+        let str = localizedStrings[indexPath.row]
+        SlideNavigationController.sharedInstance().pushViewController(SnakeInformationViewController(str: str), animated: true)
       }
   }
   

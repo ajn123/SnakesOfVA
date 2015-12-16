@@ -15,14 +15,6 @@ class SnakeViewController: UIViewController {
     
     let textTitles = ["Description", "Wherabouts"]
     
-    var screenWidth: CGFloat {
-        return UIScreen.mainScreen().bounds.width
-    }
-    
-    var screenHeight: CGFloat {
-        return UIScreen.mainScreen().bounds.height
-    }
-    
     let mapViewImageHeight: CGFloat = 200.0
     
     lazy var slideShow: UIScrollView = {
@@ -135,7 +127,6 @@ class SnakeViewController: UIViewController {
             detailLabel.numberOfLines = 0
             self.screenScrollView.addSubview(label)
             self.screenScrollView.addSubview(detailLabel)
-
             
             let titleConstraint = NSLayoutConstraint(item: label, attribute: .Top, relatedBy: .Equal,
                 toItem: currentView, attribute: .Bottom, multiplier: 1, constant: titleLabelVerticalDistance)
@@ -169,6 +160,7 @@ class SnakeViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         var height: CGFloat = 0.0
+        print(animated)
         for item in screenScrollView.subviews {
             height += item.bounds.height
         }
@@ -178,7 +170,6 @@ class SnakeViewController: UIViewController {
             titleLabelVerticalDistance
         screenScrollView.contentSize = CGSize(width: screenWidth, height: height)
     }
-    
 }
 
 
