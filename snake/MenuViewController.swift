@@ -61,7 +61,9 @@ class MenuViewController: UITableViewController {
       }
     default:
         let str = localizedStrings[indexPath.row]
-        SlideNavigationController.sharedInstance().pushViewController(SnakeInformationViewController(str: str), animated: true)
+        let title = menuItems[indexPath.row]
+        SlideNavigationController.sharedInstance().pushViewController(
+          SnakeInformationViewController(str: str, title: title), animated: true)
       }
   }
   

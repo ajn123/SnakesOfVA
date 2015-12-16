@@ -26,9 +26,9 @@ class SnakeInformationViewController: UIViewController, SlideNavigationControlle
     return screen
   }()
   
-  init(str: String) {
+  init(str: String, title: String) {
     super.init(nibName: nil, bundle: nil)
-    
+    self.title = title
     label.text = NSLocalizedString(str, comment: "content")
   }
 
