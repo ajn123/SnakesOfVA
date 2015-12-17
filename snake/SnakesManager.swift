@@ -13,9 +13,9 @@ class SnakesManager {
     
     static var instance = SnakesManager()
     
-    let header = ["Venomous Snakes", "Small Snakes (up to 2 ft.)",
-                  "Mid-sized Snakes (Between 2ft. and 4 ft.)",
-                  "Large Snakes (Over 4 ft.)"]
+    let header = ["Venomous Snakes", "Small Snakes (up to 2 ft.) Harmless",
+                  "Mid-sized Snakes (Between 2ft. and 4 ft.) Harmless",
+                  "Large Snakes (Over 4 ft.) Harmless"]
                 
     var snakes = [[Snake]]()
     

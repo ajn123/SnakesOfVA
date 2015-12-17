@@ -53,6 +53,7 @@ class ViewController: UITableViewController, SlideNavigationControllerDelegate {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let vc = SnakeViewController()
         vc.title = SnakesManager.instance.snakes[indexPath.section][indexPath.row].commonName
+        vc.snake = SnakesManager.instance.snakes[indexPath.section][indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

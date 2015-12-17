@@ -13,10 +13,10 @@ class MenuViewController: UITableViewController {
   
   
   let menuItems = ["Snakes of Virginia", "About Snakes","Snake Identification",
-    "Snake Conservation", "Snake Bite", "FAQ",]
+    "Snake Conservation", "Snake Bite", "Living With Snakes", ""]
   
   let localizedStrings = ["", "Snakes_About", "Snake_Identification_Tips",
-    "Snake_Conservation", "Snake_Bite", "Living_With_Snakes"]
+    "Snake_Conservation", "Snake_Bite", "Living_With_Snakes", ""]
   
   
   override func viewDidLoad() {
@@ -31,7 +31,6 @@ class MenuViewController: UITableViewController {
   }
   
   
-  
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     // print(SnakesManager.instance.snakes[section].count)
     return menuItems.count
@@ -41,7 +40,13 @@ class MenuViewController: UITableViewController {
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     //let cell = tableView.dequeueReusableCellWithIdentifier("snakeCell") as! SnakeCell
     let cell =  UITableViewCell()
-    cell.textLabel?.text = menuItems[indexPath.row]
+    switch indexPath.row {
+    case 0...5:
+      
+      cell.textLabel?.text = menuItems[indexPath.row]
+    default:
+      cell.imageView?.image = UIImage.scaleUIImageToSize(UIImage(named: "vhs_app_logo")!, size: CGSize(width: 100, height: 100))
+    }
     return cell
   }
   
@@ -59,6 +64,10 @@ class MenuViewController: UITableViewController {
         SlideNavigationController.sharedInstance().popAllAndSwitchToViewController(
           ViewController(), withCompletion: nil)
       }
+    case indexPath.row - 1:
+      // TODO:
+      
+      break
     default:
         let str = localizedStrings[indexPath.row]
         let title = menuItems[indexPath.row]
@@ -67,5 +76,10 @@ class MenuViewController: UITableViewController {
       }
   }
   
+  override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    if(indexPath.row < indexdd)
+    
+    return 100.0
+  }
 
 }

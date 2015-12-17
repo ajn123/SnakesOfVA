@@ -9,11 +9,13 @@
 import UIKit
 
 class SnakeViewController: UIViewController {
-    
+  
+    var snake: Snake! = nil
+  
     let titleLabelVerticalDistance: CGFloat = 10
     let detailLabelVerticalDistance: CGFloat = 2
     
-    let textTitles = ["Description", "Wherabouts"]
+    let textTitles = ["Description", "Habits"]
     
     let mapViewImageHeight: CGFloat = 200.0
     
@@ -55,11 +57,21 @@ class SnakeViewController: UIViewController {
         
         var x: CGFloat = 0.0
 
-        for _ in 1...5 {
+        for index in 1...5 {
             let imv =
               UIImageView(frame: CGRect(x: CGFloat(x), y: CGFloat(0.0),
                 width: CGFloat(screenWidth), height: CGFloat(200)))
+          
+          var snakeImage: UIImage? = UIImage(named: "northern_copperhead_\(index)")
+          
+          if let snImg = snakeImage {
+            imv.image = snImg
+          }
+          else {
             imv.image = UIImage(named: "northern_copperhead")!
+          }
+          
+
             imv.contentMode = .ScaleAspectFit
             slideShow.addSubview(imv)
             x = x + screenWidth
@@ -140,19 +152,33 @@ class SnakeViewController: UIViewController {
             let widthConstraint2 =
               NSLayoutConstraint(item: detailLabel, attribute: .Width, relatedBy: .Equal,
                 toItem: self.screenScrollView, attribute: .Width, multiplier: 1.0, constant: -5.0)
-            
+          
+          
+          
             let rightConstraint =
               NSLayoutConstraint(item: detailLabel, attribute: .Left, relatedBy: .Equal,
                 toItem: screenScrollView, attribute: .Left, multiplier: 1.0, constant: 5)
-            
+          
+            let leftConstraint =
+              NSLayoutConstraint(item: detailLabel, attribute: .Right, relatedBy: .Equal,
+                toItem: screenScrollView, attribute: .Right, multiplier: 1.0, constant: 5)
+          
+        
             let rightConstraint2 =
               NSLayoutConstraint(item: label, attribute: .Left, relatedBy: .Equal,
                 toItem: screenScrollView, attribute: .Left, multiplier: 1.0, constant: 5)
-            
+          
+          let leftConstraint2 =
+            NSLayoutConstraint(item: label, attribute: .Right, relatedBy: .Equal,
+              toItem: screenScrollView, attribute: .Right, multiplier: 1.0, constant: 5)
+          
             self.view.addConstraints([titleConstraint, detailConstraint])
             self.view.addConstraints([widthConstraint, widthConstraint2])
             self.view.addConstraints([rightConstraint, rightConstraint2])
-           
+          
+            self.view.addConstraints([rightConstraint, rightConstraint2])
+            self.view.addConstraints([leftConstraint, leftConstraint2])
+          
             currentView = detailLabel
         }
     }

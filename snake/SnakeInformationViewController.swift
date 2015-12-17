@@ -58,12 +58,15 @@ class SnakeInformationViewController: UIViewController, SlideNavigationControlle
       constant: 5.0)
     
     let c2 = NSLayoutConstraint(item: label, attribute: .Width, relatedBy: .Equal,
-      toItem: self.screenScrollView, attribute: .Width, multiplier: 1.0, constant: -5)
+      toItem: self.screenScrollView, attribute: .Width, multiplier: 1.0, constant: -20)
     
     let c3 = NSLayoutConstraint(item: label, attribute: .Left, relatedBy: .Equal,
       toItem: self.screenScrollView, attribute: .Left, multiplier: 1.0, constant: 10.0)
     
-    self.screenScrollView.addConstraints([c1,c2,c3])
+    let c4 = NSLayoutConstraint(item: label, attribute: .Right, relatedBy: .Equal,
+      toItem: self.screenScrollView, attribute: .Right, multiplier: 1.0, constant: 10.0)
+    
+    self.screenScrollView.addConstraints([c1,c2,c3,c4])
     
   }
   

@@ -46,7 +46,7 @@ class SnakeCell: UITableViewCell {
         
         // self.bImage =  snake.primaryImage!
         // self.bImage =  UIImage(named: "northern_copperhead")!
-        print(snake.commonName)
+        // print(snake.commonName)
         self.bImage =  snake.primaryImage!
         
         setLayout()
@@ -91,11 +91,11 @@ class SnakeCell: UITableViewCell {
             options: NSLayoutFormatOptions(), metrics: nil, views: dict)
         
         let cl2 =
-          NSLayoutConstraint.constraintsWithVisualFormat("H:|-[label]",
+          NSLayoutConstraint.constraintsWithVisualFormat("H:|-2-[label]",
             options: NSLayoutFormatOptions(), metrics: nil, views: dict)
         
         let cl3 =
-          NSLayoutConstraint.constraintsWithVisualFormat("H:|-[detailLabel]",
+          NSLayoutConstraint.constraintsWithVisualFormat("H:|-2-[detailLabel]",
             options: NSLayoutFormatOptions(), metrics: nil, views: dict)
         
         self.addConstraints(cl1)

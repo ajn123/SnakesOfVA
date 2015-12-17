@@ -35,3 +35,496 @@
 
 "Snake_Bite" = "  Although it may provide little comfort, each year bee stings, lightening strikes, and horses kill more people in Virginia than venomous snakes do. Only five deaths in Virginia have been attributed to venomous snakebites since 1948, and three of those involved people intentionally handling snakes. Not all bites inject venom; at least one in five is a 'dry' bite. Of the three venomous species in Virginia, copperheads have the least potency. Bites from cottonmouths and timber rattlesnakes are potentially deadly if left untreated. The severity of the bite depends on its location on the body, the type of snake, and the sensitivity, age, and health of the person bitten. Remember that venomous snakes are not purposely lying in wait or on the prowl for some unsuspecting person to bite. In fact, the primary purpose of venom is to capture small animals efficiently for food. Snakes, including venomous ones, would rather flee than confront an adversary as large as a person. You can prevent unpleasant encounters by following these simple rules:\n  1) Learn about snakes and their environments so that you can identify and avoid venomous species.\n  2) Never put your hands and feet or sit in places you cannot see.\n  3) Stay on paths and avoid tall grass, underbrush, and rocky bluffs that may harbor venomous snakes.\n  4) When you encounter one, leave the snake alone and do not attempt to kill it.\n  5) Do not handle a freshly killed snake. It can still bite.\n\n  In case of a venomous snakebite\n  1) Remain calm - a snakebite is rarely fatal. \n  2) Do not drink alcohol or apply a constrictive tourniquet or ice to the wound.\n  3) Identify the snake if it will not put you at risk or waste valuable time.\n  4) Keep the bitten body part immobilized and if possible level with the heart.\n  5) Seek immediate medical attention.";
 
+/*
+ strs.strings
+ snakes_of_virginia
+ 
+ Created by Mark Norton on 12/7/15.
+ Copyright © 2015 John White. All rights reserved.
+ */
+
+
+// Snakes of Virginia
+
+// Venomous Species
+
+// Northern Copperhead
+// Agkistrodon contortrix mokasen
+//
+//"Northern Copperhead_Length" = "Up to 48 in. (122 cm)";
+//
+//"Northern Copperhead_Description" = "A heavy bodied snake, pinkish to tan in color with several dark hourglass bands across the back. Juveniles look similar to adults but have a bright yellow tail tip.";
+//
+//"Northern Copperhead_Habitat" = "Found statewide in forests, fields, rock outcrops, marshes, and agricultural buildings.";
+//
+//"Northern Copperhead_Habits" = "Typically, active in Virginia from April through October.  Copperheads are active during the day in spring and fall, becoming more nocturnal during the late spring and in to summer.  Copperheads give birth to between 3 to 15 live young from late August to early October.";
+//
+//"Northern Copperhead_Notes" = "Often human activity inadvertently attracts copperheads. Surface cover, outdoor pet food, untidy bird feeders, etc. Anything that attracts rodents will in turn attract snakes. The copperheads first line of defense is to remain motionless and depend on its excellent camouflage. The next level of defensive behaviors includes flattening of the body and vibrating the tail.";
+//
+//
+//// Eastern Cottonmouth
+//// Agkistrodon piscivorus piscivorus
+//
+//"Eastern Cottonmouth_Length" = "Up to 61 in. (155 cm)";
+//"Eastern Cottonmouth_Description" = "A heavy bodied snake, dark green to black with dark hourglass bands across the back. Young are pinkish with a more distinct pattern than adults. Young have a conspicuous bright yellow to greenish tail tip.";
+//
+//"Eastern Cottonmouth_Habitat" = "Limited distribution within Virginia. Found in freshwater marshes of the lower Costal Plain region.";
+//
+//"Eastern Cottonmouth_Habits" = "Typically, active in Virginia from April through September. Often found basking under vegetation near water. Our harmless Northern Watersnake is often confused with the venomous Eastern Cottonmouth. In Virginia the Eastern Cottonmouth gives birth to 5 – 9 live young during September.";
+//
+//"Eastern Cottonmouth_Notes" = "The first line of defensive of these non-aggressive snakes is camouflage. The next level of defensive behaviors includes flattening of the body, vibrating the tail and opening the mouth to expose the white inside.";
+//
+//
+//// Timber Rattlesnake
+//// Crotalus horridus
+//"Timber Rattlesnake_Length" = "Up to 67 in. (170 cm)";
+//
+//"Timber Rattlesnake_Description" = "A heavy bodied snake with one or more rattle segments. General body coloration varies from yellowish to black with several dark zigzag bands. Young are colored and patterned as adults.";
+//
+//"Timber Rattlesnake_Habitat" = "In Virginia we have two separate and distinct populations of Timber Rattlesnake. The majority are found in forest and rocky ridge tops in mountainous regions. A smaller population referred to as the “Canebrake Rattlesnake” occurs in the southeastern Costal Plain.";
+//
+//"Timber Rattlesnake_Habits" = "Active during the day and night, this ambush predator preys mainly on small mammals. Timber Rattlesnakes give birth to between 3 to 13 live young from late September to early October.";
+//
+//"Timber Rattlesnake_Notes" = "Timber Rattlesnakes or “Canebrake Rattlesnakes” found in the southeastern Costal plain of Virginia are listed as state endangered.";
+//
+///************** End Venomous Snakes *****************/
+//
+//// Small Snakes (Species with a maximum total length of up to 2 feet)
+//
+//// Eastern Wormsnake
+//// Carphophis amoenus amoenus
+//
+//"Eastern Wormsnake_Length" = "Up to 15 in. (38 cm)";
+//
+//"Eastern Wormsnake_Description" = "A small, slender, brown snake with a pink belly. Head is flattened towards snout. Tail is tipped with a small spine. Scales are smooth. Young similar to adults except are darker brown and have a brighter pink belly.";
+//
+//"Eastern Wormsnake_Habitat" = "Occurs statewide in forests and fields.";
+//
+//"Eastern Wormsnake_Habits" = "This secretive snake burrows in soil and leaf litter feeding on earthworms. The spine on its tail is used to position its prey for swallowing. Females lay 2-6 eggs.";
+//
+//"Eastern Wormsnake_Notes" = "Snake does not bite when handled and will try to burrow between one's fingers to escape. Similar to smooth Earthsnake that is gray to brown and ring-necked snake that is gray with a yellow collar around neck.";
+//
+//
+//// Northern Ring-necked Snake
+//// Diadophis punctatus edwardsii
+//
+//"Northern Ring-necked Snake_Length" = "Up to 20 in. (51 cm)";
+//
+//"Northern Ring-necked Snake_Description" = "A small, gray to black snake with a yellow to white collar around neck. Belly is yellow sometimes with small black spots. Scales are smooth. Young similar to adults.";
+//
+//"Northern Ring-necked Snake_Habitat" = "Occurs statewide in forests and meadows.";
+//
+//"Northern Ring-necked Snake_Habits" = "This secretive snake is found underneath objects such as logs, boards, rocks, and debris. Feeds on earthworms, salamanders, and small lizards. Females lay 2-7 eggs.";
+//
+//"Northern Ring-necked Snake_Notes" = "Snake does not bite when handled. Two subspecies are present in Virginia, the northern (Diadophis punctatus edwardsii) and southern (D. p. punctatus) ring-necked snakes. The southern ring-necked snake occurs primarily in the southeastern portion of Virginia.";
+//
+//
+//// Southern Ring-necked Snake
+//// Diadophis punctatus punctatus
+//
+//"Southern Ring-necked Snake_Length" = "Up to 20 in. (51 cm)";
+//
+//"Southern Ring-necked Snake_Description" = "A small, gray to black snake with a yellow to white collar around neck. Belly is yellow sometimes with small black spots. Scales are smooth. Young similar to adults.";
+//
+//"Southern Ring-necked Snake_Habitat" = "Occurs statewide in forests and meadows.";
+//
+//"Southern Ring-necked Snake_Habits" = "This secretive snake is found underneath objects such as logs, boards, rocks, and debris. Feeds on earthworms, salamanders, and small lizards. Females lay 2-7 eggs.";
+//
+//"Southern Ring-necked Snake_Notes" = "Snake does not bite when handled. Two subspecies are present in Virginia, the northern (Diadophis punctatus edwardsii) and southern (D. p. punctatus) ring-necked snakes. The southern ring-necked snake occurs primarily in the southeastern portion of Virginia.";
+//
+//
+//// Rough Earthsnake
+//// Haldea striatula
+//
+//"Rough Earthsnake_Length" = "Up to 12 in. (30 cm)";
+//
+//"Rough Earthsnake_Description" = "A small, gray to dark brown snake with a white belly. Head is dark brown to black towards long snout. Some specimens may have a faded yellow crossband on back of head. Scales are keeled. Young are dark brown with a white to yellow crossband on head.";
+//
+//"Rough Earthsnake_Habitat" = "Forests, fields, grassy areas, and suburban woodlots in the southeastern Piedmont and Coastal Plain regions.";
+//
+//"Rough Earthsnake_Habits" = "Active at night, this species feeds on earthworms. During the day, this snake may be found under logs, boards, and trash. Females give birth to 5-8 live young.";
+//"Rough Earthsnake_Notes" = "This harmless snake rarely bites and is known to 'play dead' becoming rigid, opening its mouth, and hanging out its tongue. Similar to smooth earth snake that lacks keeled scales and long snout.";
+//
+//
+//// Smooth Greensnake
+//// Opheodrys vernalis
+//
+//"Smooth Greensnake_Length" = "Up to 23 in. (58 cm)";
+//
+//"Smooth Greensnake_Description" = "A slender, green snake with a yellow to white belly. Scales are smooth. Tail is approximately 30% of the total length. Young similar to adults except paler in color.";
+//
+//"Smooth Greensnake_Habitat" = "Found in grassy fields and forest edges in the mountain regions of westcentral Virginia.";
+//"Smooth Greensnake_Habits" = "This snake feeds during the day on insect larvae, spiders, and snails. Individuals can be found under boards and sheet metal. Females lay 5-7 eggs.";
+//
+//"Smooth Greensnake_Notes" = "Snake will quickly flee to grassy areas when threatened. It is harmless and rarely bites. Similar to rough greensnake that has keeled scales.";
+//
+//
+//// Northern Brownsnake
+//// Storeria dekayi dekayi
+//
+//"Northern Brownsnake_Length" = "Up to 15 in. (38 cm)";
+//
+//"Northern Brownsnake_Description" = "A small, light to dark brown snake with a series of small, paired black spots along the back. Belly is white to gray. A short black line is present behind each eye. Scales are keeled. Young are dark brown to black with a thin white ring around neck.";
+//
+//"Northern Brownsnake_Habitat" = "Occurs primarily east of the New River Valley in forests, fields, and suburban areas. Also found in far southwestern Virginia.";
+//
+//"Northern Brownsnake_Habits" = "This secretive snake is found under objects such as logs, boards, trash, and rocks. They are most active at night, feeding on earthworms and slugs. Females give birth to 3-26 live young.";
+//
+//"Northern Brownsnake_Notes" = "Also known as DeKay's snake, this animal used to be common even in cities. Similar to smooth earthsnake, redbellied snake, and gartersnake, which lack paired black spots.";
+//
+//
+//// Northern Red-bellied Snake
+//// Storeria occipitomaculata occipitomaculata
+//
+//"Northern Red-bellied Snake_Length" = "Up to 15 in. (38 cm)";
+//
+//"Northern Red-bellied Snake_Description" = "A small snake that varies in color from brown to black to gray. Two faint black stripes are sometimes present on back. Belly is red to orange, sometimes yellow, bordered in gray. Scales are keeled. Young are black with three white spots on neck.";
+//
+//"Northern Red-bellied Snake_Habitat" = "Occurs from the New River Valley eastward in forests, fields, and suburban areas. No records known from the Eastern Shore.";
+//
+//"Northern Red-bellied Snake_Habits" = "Active at night, this species feeds primarily on slugs. Often found under boards, logs, trash, and leaves. Females give birth to 2-12 live young.";
+//
+//"Northern Red-bellied Snake_Notes" = "This harmless snake will not bite when handled but may emit musk and curl its upper lip to expose black mouth. Similar to brown snake that has white belly and two rows of black spots down back.";
+//
+//
+//// Southeastern Crowned Snake
+//// Tantilla coronata
+//
+//"Southeastern Crowned Snake_Length" = "Up to 10 in. (25 cm)";
+//
+//"Southeastern Crowned Snake_Description" = "A small, tan to dark brown snake with a black head. Belly is white to pink. Scales are smooth. Young similar to adults.";
+//
+//"Southeastern Crowned Snake_Habitat" = "Occurs in forests of the Coastal Plain and Piedmont regions of southcentral Virginia.";
+//
+//"Southeastern Crowned Snake_Habits" = "This secretive snake is active at night feeding on earthworms, spiders, centipedes, and insect larvae. It is usually found in rotten logs and stumps. Females lay 1-3 eggs.";
+//
+//"Southeastern Crowned Snake_Notes" = "This harmless snake will not bite when handled. Because of its secretive nature, very little is known about this species. Similar to brownsnake that does not have a black head and red-bellied snake that has a red belly.";
+//
+//
+//// Mountain Earthsnake
+//// Virginia valeriae pulchra
+//
+//"Mountain Earthsnake_Length" = "Up to 13 in. (33 cm)";
+//
+//"Mountain Earthsnake_Description" = "A small, reddish brown to dark gray snake with small black flecks. Belly is white. Scales are smooth. Young similar to adults but have a dark line in front of eyes.";
+//
+//"Mountain Earthsnake_Habitat" = "Occurs east of the New River Valley and in far southwestern Virginia's forests, fields, wetlands, and suburban woodlots.";
+//
+//"Mountain Earthsnake_Habits" = "This snake spends much of its life underground feeding on earthworms. It can occasionally be found under boards, logs, trash, and leaves. Females give birth to 2-9 live young.";
+//
+//"Mountain Earthsnake_Notes" = "Snake appears similar to rough earthsnake but lacks keeled scales, black flecks, and long snout. Two subspecies are recognized in Virginia, the mountain (Virginia valeriae pulchra) and smooth (Virginia v. valeriae) earthsnakes. The mountain earthsnake is much rarer and only found in Highland County.";
+//
+//
+//// Eastern Smooth Earthsnake
+//// Virginia valeriae valeriae
+//"Eastern Smooth Earthsnake_Length" = "Up to 13 in. (33 cm)";
+//
+//"Eastern Smooth Earthsnake_Description" = "A small, reddish brown to dark gray snake with small black flecks. Belly is white. Scales are smooth. Young similar to adults but have a dark line in front of eyes.";
+//
+//"Eastern Smooth Earthsnake_Habitat" = "Occurs east of the New River Valley and in far southwestern Virginia's forests, fields, wetlands, and suburban woodlots.";
+//
+//"Eastern Smooth Earthsnake_Habits" = "This snake spends much of its life underground feeding on earthworms. It can occasionally be found under boards, logs, trash, and leaves. Females give birth to 2-9 live young.";
+//
+//"Eastern Smooth Earthsnake_Notes" = "Snake appears similar to rough earthsnake but lacks keeled scales, black flecks, and long snout. Two subspecies are recognized in Virginia, the mountain (Virginia valeriae pulchra) and smooth (Virginia v. valeriae) earthsnakes. The mountain earth snake is much rarer and only found in Highland County.";
+//
+//
+//// Medium Snakes (Species with a maximum total length of over 2ft.  and up to 4ft.)
+//
+//
+//// Northern Scarletsnake
+//// Cemophora coccinea copei
+//
+//"Northern Scarletsnake_Length" = "Up to 26 in. (66 cm)";
+//
+//"Northern Scarletsnake_Description" = "A colorful snake with straight red bands outlined in black that do not encircle body. Color between bands is yellow or white. Belly is white. Scales are smooth. Young similar to adults, but bands are pink.";
+//
+//"Northern Scarletsnake_Habitat" = "Occurs in forests and open areas in southeastern Piedmont and Coastal Plain regions of Virginia.";
+//
+//"Northern Scarletsnake_Habits" = "Prefers loose, sandy soils where it burrows for snake eggs, lizards, baby mice, and insect larvae. Usually found underneath rocks, logs, and boards. Females lay 2-9 eggs.";
+//
+//"Northern Scarletsnake_Notes" = "This harmless snake has coloration similar to that of the venomous coral snake, a species not found in Virginia. Similar to banded phase of the milksnake that has red, black, and yellow bands that continue under belly.";
+//
+//
+//// Eastern Hog-nosed Snake
+//// Heterodon platirhinos
+//"Eastern Hog-nosed Snake_Length" = "Up to 45 in. (114 cm)";
+//
+//"Eastern Hog-nosed Snake_Description" = "A stout snake with a distinctly upturned nose. Two phases are known, blotched and solid. The blotched phase has several dark brown blotches down the center of back, black spots on sides, and a mix of gray, tan, orange, red, and yellow across body. The solid phase is gray to black with no blotches. Belly is white to gray. Scales are keeled. Young are pinkish with a blotched pattern.";
+//
+//"Eastern Hog-nosed Snake_Habitat" = "Occurs statewide in forests, fields, and woodland edges.";
+//
+//"Eastern Hog-nosed Snake_Habits" = "Active during the day, this snake feeds almost exclusively on toads. Prefers sandy soil to burrow, hunt, and hide. Females lay 17-35 eggs.";
+//
+//"Eastern Hog-nosed Snake_Notes" = "This harmless and docile snake will not bite when caught but will hiss and inflate to seem larger than normal. If unsuccessful, the snake will roll over with its tongue hanging out and play dead. Similar to many species with the exception of the upturned nose.";
+//
+//
+//// Northern Rough Greensnake
+//// Opheodrys aestivus aestivus
+//
+//"Northern Rough Greensnake_Length" = "Up to 38 in. (97 cm)";
+//
+//"Northern Rough Greensnake_Description" = "A slender, light green snake with a white to yellow belly. Scales are keeled. Young similar to adults except paler in color.";
+//
+//"Northern Rough Greensnake_Habitat" = "Occurs statewide in forests, old fields, and brushy areas near ponds and lakes.";
+//
+//"Northern Rough Greensnake_Habits" = "Active during the day, this snake spends much of the time in trees and brush hunting insect larvae and spiders. The green color provides excellent camouflage in vegetation. Females lay 3-12 eggs.";
+//
+//"Northern Rough Greensnake_Notes" = "This harmless snake will not bite even when handled. Overuse of pesticides and herbicides may be hurting populations. Similar to smooth green snake that lacks keeled scales.";
+//
+//
+//// Mole Kingsnake
+//// Lampropeltis calligaster rhombomaculata
+//
+//"Mole Kingsnake_Length" = "Up to 47 in. (119 cm)";
+//
+//"Mole Kingsnake_Description" = "A tan to browns snake with many narrow, light brown blotches on back. Belly is white to yellow with brown smudges. Scales are smooth. Young similar to adults except blotches on back are bordered in black, and belly has a faded checkerboard pattern of black and white.";
+//
+//"Mole Kingsnake_Habitat" = "Forests, agricultural areas, and old fields east of the Blue Ridge Mountains.";
+//
+//"Mole Kingsnake_Habits" = "A superb burrower, this snake spends much of its life underground feeding on rodents and reptiles, including other snakes. Occasionally found on surface after rains. Females lay 7-18 eggs.";
+//
+//"Mole Kingsnake_Notes" = "Farmers' plows sometimes unearth this snake. Similar to cornsnake and milksnake (blotched phase) that have fewer blotches and a distinct checkerboard belly pattern. Copperheads have brown hourglass bands.";
+//
+//
+//// Scarlet Kingsnake
+//// Lampropeltis elapsoides
+//
+//"Scarlet Kingsnake_Length" = "Up to 24 in. (62 cm)";
+//
+//"Scarlet Kingsnake_Description" = "A small snake with bright red, black and cream to yellowish bands that usually encircle the body. The snout is typically red and somewhat pointed.";
+//
+//"Scarlet Kingsnake_Habitat" = "This species prefers pine forests";
+//
+//"Scarlet Kingsnake_Habits" = "A secretive snake usually found under tree bark or other surface cover. Sometimes found on the road near dusk of after a summer rain.";
+//
+//"Scarlet Kingsnake_Notes" = "To date the only verified Scarlet Kingsnakes have been from Bedford County. However unverified specimens have been found  from at least three other Piedmont counties of Albemarle, Appomattox, and Mecklenburg.";
+//
+//
+//// Eastern Milksnake
+//// Lampropeltis triangulum triangulum
+//"Eastern Milksnake_Length” = “Up to 42 in. (107 cm)”;
+//
+//"Eastern Milksnake_Description” = “Two phases occur of this species, blotched and banded. The blotched phase has several brown to reddish blotches on back outlined in black, and a Y-shaped pattern on the head. The belly has a checkerboard pattern with black spots. The banded phase has red, yellow, and black crossbands. Crossbands continue under belly but do not meet. Scales are smooth. Young of both phases similar to adults but brighter.”;
+//
+//"Eastern Milksnake_Habitat" = "Occurs statewide in forests, old fields, and rock outcrops. It is not known from the Eastern Shore.
+//
+//"Eastern Milksnake_Habits" = "Active mainly at dusk, this snake feeds on mice, birds, lizards, and snakes. Because of its frequency around barns, this species was incorrectly thought to steal milk from cows. Females lay 5-20 eggs.";
+//
+//"Eastern Milksnake_Notes" = "The banded phase occurs in the southeastern portion of the state where it is rare. Color pattern mimics that of a venomous coral snake. Blotched phase similar to cornsnake that has no spotting on belly and body shape cross-section like a bread loaf. Banded phase similar to Scarletsnake that has a long snout and white belly.";
+//
+//
+//// Glossy Crayfish Snake
+//// Regina rigida rigida
+//
+//"Glossy Crayfish Snake_Length" = "Up to 31 in. (79 cm)";
+//
+//"Glossy Crayfish Snake_Description" = "Identification" = "A shiny, dark brown snake with two faint, thin black stripes along the back. Belly is white with two rows of black spots down the middle. Scales are keeled. Young similar to adults but have a pink belly.";
+//
+//"Glossy Crayfish Snake_Habitat" = "Occurs in freshwater marshes, beaver and cypress ponds, and vegetated streams and ditches of the central Coastal Plain region.";
+//
+//"Glossy Crayfish Snake_Habits" = "This highly aquatic snake feeds exclusively on crayfish. It is occasionally active at night after a heavy rain. Females give birth to 6-18 live young.";
+//
+//"Glossy Crayfish Snake_Notes" = "Virginia is the northern limit of this extremely rare species. Similar to queen snake that has a white stripe on each side and the northern watersnake thathas dark crossbands and blotches on back.";
+//
+//
+//// Queensnake
+//// Regina septemvittata
+//
+//"Queensnake_Length" = "Up to 28 in. (71 cm)";
+//
+//"Queensnake_Description" = "A brown snake with a white stripe on each side. Some individuals have black lines on back. Belly is white with two rows of brown to black spots. Scales are keeled. Young similar to adults but have narrow black stripes on back and dark stripes on belly.";
+//
+//"Queensnake_Habitat" = "Found along streams, ditches, lakes, and ponds of the upper Coastal Plain, Piedmont, and mountainous regions.";
+//
+//"Queensnake_Habits" = "Active during the day, this species feeds exclusively on molting crayfish. Prefers areas with plenty of rocks for cover. Females give birth to 5-13 live young.";
+//
+//"Queensnake_Notes" = "This harmless snake will not bite when handled but may emit musk. Loss of crayfish due to pollution can be detrimental to queen snake populations. Similar to glossy crayfish snake that lacks white stripes.";
+//
+//
+//// Common Ribbonsnake
+//// Thamnophis sauritus sauritus
+//"Common Ribbonsnake_Length" = "Up to 38 in. (97 cm)";
+//
+//"Common Ribbonsnake_Description" = "A slender, dark brown snake with three bright yellow to white stripes. Stripe on top of back may be greenish. Belly is green to blue-gray. Scales are keeled. Young similar to adults but brown in color.";
+//
+//"Common Ribbonsnake_Habitat" = "Occurs statewide in wetlands, marshes, stream banks, and ditches. No records are known from southwestern portion of Virginia.";
+//
+//"Common Ribbonsnake_Habits" = "This snake typically inhabits areas near water where it feeds on amphibians and small fish. They are frequently found basking in trees, brush, and grass overhanging water. Females give birth to 3-26 live young.";
+//
+//"Common Ribbonsnake_Notes" = "This alert and nervous snake will thrash and spray musk when handled. Similar to gartersnake that is thicker bodied and has dark spots on each side scale.";
+//
+//
+//// Eastern Gartersnake
+//// Thamnophis sirtalis sirtalis
+//
+//"Eastern Gartersnake_Length" = "Up to 48 in. (122 cm)";
+//
+//"Eastern Gartersnake_Description" = "This snake varies in color from green to dark brown with one yellow to white stripe down middle of back. One stripe on each side may be faded. Belly greenish-brown with small black spots on the outer edge of each scale. Scales are keeled. Young similar to adults but have a brown back and white belly.";
+//
+//"Eastern Gartersnake_Habitat" = "Occurs statewide in wetlands, forests, grassy fields, and suburban areas.";
+//
+//"Eastern Gartersnake_Habits" = "Gartersnakes feed on a wide variety of prey including spiders, insects, fish, and amphibians. Sometimes found around suburban gardens and houses. Females give birth to 9-57 live young.";
+//
+//"Eastern Gartersnake_Notes" = "Snake may flatten head to appear larger, strike, and spray musk if handled. They were named after the resemblance they have to the garters once fashionable for supporting gentlemen's socks. Similar to ribbonsnake that is more slender and darker in color.";
+//
+//
+//// Large Snakes (Species with a maximum total length of over 4 ft.)
+//
+//
+//// Northern Black Racer
+//// Coluber constrictor constrictor
+//
+//"Northern Black Racer_Length" = "Up to 71 in. (180 cm)";
+//
+//"Northern Black Racer_Description" = "A large, shiny, black snake with white chin and gray belly. Body shape is rounded in cross-section. Scales are smooth. Young are gray with black to reddish-brown blotches from head to tail.";
+//
+//"Northern Black Racer_Habitat" = "Occurs statewide in forests, old fields, and grasslands.";
+//
+//"Northern Black Racer_Habits" = "Active during the day, this snake feeds on insects, amphibians, reptiles, birds, and rodents. It is sometimes seen basking in the open or hiding under boards and rocks. Females lay 12-36 eggs.";
+//
+//"Northern Black Racer_Notes" = "True to its name, the racer is very fast and when caught will bite repeatedly. Adults are similar to ratsnakes that have white and black belly and keeled scales. Young appear similar to young ratsnakes but lack stripe from eye to corner of mouth and have blotches on tail.";
+//
+//
+//// Eastern Mudsnake
+//// Farancia abacura abacura
+//
+//"Eastern Mudsnake_Length" = "Up to 59 in. (150 cm)";
+//
+//"Eastern Mudsnake_Description" = "A large, shiny black snake with red bars on sides. Head scales are outlined in white. Belly has pattern of alternating red and black patches. Red sidebars connect to red patches on belly. Chin and throat are yellow. Scales are smooth. Young similar to adults.";
+//
+//"Eastern Mudsnake_Habitat" = "Occurs in freshwater marshes, slow moving streams, and ditches of the lower Coastal Plain region.";
+//
+//"Eastern Mudsnake_Habits" = "This highly aquatic snake is active at night feeding on eel-like amphibians called amphiumas. Sometimes hide underneath vegetation during the day. Females lay 4-104 eggs.";
+//
+//"Eastern Mudsnake_Notes" = "When caught, these snakes will hide their head beneath their coils and expose their red belly. Tail forms a hardened tip used to move prey into mouth. Similar to rainbow snakes that have stripes on back.";
+//
+//
+//// Common Rainbow Snake
+//// Farancia erytrogramma erytrogramma
+//
+//"Common Rainbow Snake_Length" = "Up to 68 in. (173 cm)";
+//
+//"Common Rainbow Snake_Description" = "A large, colorful black snake with three red stripes down back. Belly is yellow with two rows of black spots. Chin and throat are yellow. Scales are smooth. Young similar to adults.";
+//
+//"Common Rainbow Snake_Habitat" = "Rivers, ditches, and marshes of the Coastal Plain region.";
+//
+//"Common Rainbow Snake_Habits" = "Active at night, this species feeds exclusively on eels. Occasionally found on land after a heavy rain. Females lay 20-40 eggs.";
+//
+//"Common Rainbow Snake_Notes" = "This harmless snake will not bite when handled but will thrash and poke handler with hardened spine on tail. Spine cannot pierce through skin. Similar to mudsnake that has a shiny black body and red sidebars.";
+//
+//
+//
+//// Eastern Kingsnake
+//// Lampropeltis getula
+//
+//"Eastern Kingsnake_Length" = "Up to 64 in. (163 cm)";
+//
+//"Eastern Kingsnake_Description" = "A large, black snake having two subspecies, the eastern and black kingsnakes. The eastern kingsnake has several narrow yellow to white bands across a black body. The black kingsnake lacks banding but has yellow spots on head and body. Belly has checkerboard pattern of black and white to yellow squares. Scales are smooth. Young similar in appearance to adults.";
+//
+//"Eastern Kingsnake_Habitat" = "Occurs in forests, fields, and swamps in Shenandoah Valley and east of the Blue Ridge Mountains, and in southwestern Virginia.";
+//
+//"Eastern Kingsnake_Habits" = "This snake feeds on mice, lizards, turtle eggs, and other snakes, including venomous ones. They are typically found on the ground under logs, boards, and in abandoned buildings. Females lay 9-17 eggs.";
+//
+//"Eastern Kingsnake_Notes" = "Kingsnakes are immune to the poison of Virginia's venomous snakes. The eastern king snake (Lampropeltis getula getula) is found east of the Blue Ridge Mountains, and the black kingsnake (L. g. nigra) occurs in the southwestern corner of Virginia.";
+//
+//
+//
+//// Eastern Black Kingsnake
+//// Lampropeltis nigra
+//
+//"Eastern Black Kingsnake_Length" = "Up to 64 in. (163 cm)";
+//
+//"Eastern Black Kingsnake_Description" = "A large, black snake having two subspecies, the eastern and black kingsnakes. The eastern kingsnake has several narrow yellow to white bands across a black body. The black kingsnake lacks banding but has yellow spots on head and body. Belly has checkerboard pattern of black and white to yellow squares. Scales are smooth. Young similar in appearance to adults.";
+//
+//"Eastern Black Kingsnake_Habitat" = "Occurs in forests, fields, and swamps in Shenandoah Valley and east of the Blue Ridge Mountains, and in southwestern Virginia.";
+//
+//"Eastern Black Kingsnake_Habits" = "This snake feeds on mice, lizards, turtle eggs, and other snakes, including venomous ones. They are typically found on the ground under logs, boards, and in abandoned buildings. Females lay 9-17 eggs.";
+//
+//"Eastern Black Kingsnake_Notes" = "Kingsnakes are immune to the poison of Virginia's venomous snakes. The eastern king snake (Lampropeltis getula getula) is found east of the Blue Ridge Mountains, and the black kingsnake (L. g. nigra)occurs in the southwestern corner of Virginia.";
+//
+//
+//
+//// Plain-bellied Water Snake
+//// Nerodia erythrogaster
+//
+//"Plain-bellied Water Snake_Length" = "Up to 58 in. (147 cm)";
+//
+//"Plain-bellied Water Snake_Description" = "A large, reddish brown snake with a brown head and red belly. Chin is red to yellow. Scales are keeled. Young have crossbands in front half of body and blotches in last half. Belly of young is white to yellow.";
+//
+//"Plain-bellied Water Snake_Habitat" = "Occurs in swamps, ponds, and ditches of southeastern Virginia.";
+//
+//"Plain-bellied Water Snake_Habits" = "Active during the day, this snake feeds on crayfish, fish, and amphibians. Basks on low-hanging vegetation or on the ground near water. Females give birth to 5-37 live young.";
+//
+//"Plain-bellied Water Snake_Notes" = "Although nonvenomous, this snake will bite and emit musk when handled. Similar to northern watersnakes that have spotting on belly and racers that are black with a gray belly.";
+//
+//
+//
+//// Northern Watersnake
+//// Nerodia sipedon sipedon
+//
+//"Northern Watersnake_Length" = "Up to 54 in. (137 cm)";
+//
+//"Northern Watersnake_Description" = "A brown to gray snake with varying amounts of red, yellow, and white. Several large blotches and crossbands on back. Belly color varies from white to yellow sometimes with spotting. Body shape is chunky and round in cross-section. Scales are keeled. Young have more vivid pattern and coloration than adults.";
+//
+//"Northern Watersnake_Habitat" = "Occurs statewide in and around freshwater wetlands, ponds, streams, and ditches.";
+//
+//"Northern Watersnake_Habits" = "This snake is active during the day feeding on fish and amphibians. Often seen basking on rocks and vegetation. Females give birth to 11-56 live young.";
+//
+//"Northern Watersnake_Notes" = "Although nonvenomous, this snake has long teeth and will bite repeatedly while emitting a musk when handled. Most often confused with cottonmouths that have broader bands, a dark green to brown body, vertical pupils, and a pit between the nostril and eye.";
+//
+//
+//
+//// Brown Watersnake
+//// Nerodia taxispilota
+//
+//"Brown Watersnake_Length" = "Up to 69 in. (175 cm)";
+//
+//"Brown Watersnake_Description" = "A large, brown snake with many square, chocolate-colored blotches on back and sides. Belly is brown with dark brown smudges. Scales are keeled. Young similar to adults.";
+//
+//"Brown Watersnake_Habitat" = "Rivers, lakes, and marshes of southeastern Virginia.";
+//
+//"Brown Watersnake_Habits" = "This species feeds mainly on catfish. Often seen basking on overhanging vegetation. Females give birth to 16-63 live young.";
+//
+//"Brown Watersnake_Notes" = "This nonvenomous snake will thrash and bite if handled. Because of its large size, adults have few natural predators besides humans. Similar to cottonmouths and northern watersnakes that have bands and red-bellied watersnakes that have no markings.";
+//
+//
+//
+//// Eastern Ratsnake
+//// Pantherophis alleghaniensis
+//
+//"Eastern Ratsnake_Length" = "Up to 80 in. (203 cm)";
+//
+//"Eastern Ratsnake_Description" = "A large, black snake with a white chin. Belly is black and white checkered with black smudges turning all gray towards tail. Body cross-section is shaped like a bread loaf. Scales are weakly keeled. Young are gray with black to brown blotches on body. Stripe present from corner of mouth to eye (eye-jaw stripe) in juveniles but not adults.";
+//
+//"Eastern Ratsnake_Habitat" = "Occurs statewide in forests, old fields, and agricultural areas.";
+//
+//"Eastern Ratsnake_Habits" = "This snake is an excellent climber, often found in trees and old buildings feeding on rodents, birds, and eggs. Females lay 5-19 eggs.";
+//
+//"Eastern Ratsnake_Notes" = "Adults appear similar to racers that are shiny, smooth scaled, and have a totally gray belly. Young appear similar to young racers that have more blotches and lack the eye-jaw stripe.";
+//
+//
+//// Red Cornsnake
+//// Pantherophis guttatus
+//
+//"Red Cornsnake_Length" = "Up to 57 in. (145 cm)";
+//
+//"Red Cornsnake_Description" = "A gray to reddish-orange snake with many reddish to brown blotches on back. A spear-point pattern is present on head. Belly pattern is a distinct checkerboard of black and white. Body cross-section is shaped like a bread loaf. Scales are weakly keeled. Young similar to adults except blotches on back are dark brown.";
+//
+//"Red Cornsnake_Habitat" = "Forests, agricultural areas, and old fields in the mountains, Piedmont, and Coastal Plain regions of Virginia. Also occurs in southwestern Virginia.";
+//
+//"Red Cornsnake_Habits" = "Although an excellent climber, this snake spends much of its life underground feeding on rodents. It is a very secretive snake that is active mainly during summer nights. Females lay 7-30 eggs.";
+//
+//"Red Cornsnake_Notes" = "This colorful and harmless snake is popular in the pet trade and localized collections may be depleting populations. Similar to blotched phase of milksnake that has smooth scales and Y-shaped pattern on head.";
+//
+//
+//// Northern Pinesnake
+//// Pituophis melanoleucus melanoleucus
+//
+//"Northern Pinesnake_Length" = "Up to 66 in. (168 cm)";
+//"Northern Pinesnake_Description" = "A large, black and white snake with black to brown blotches along body. Belly is white to yellow. Scales are keeled. Young similar in appearance to adults.";
+//"Northern Pinesnake_Habitat" = "Occurs in mountain forests of westcentral Virginia.";
+//"Northern Pinesnake_Habits" = "This snake prefers a light, sandy soil that it can burrow into easily. It feeds on rodents, birds, and their eggs. Females lay 3-27 eggs.";
+//"Northern_Pinesnake_Notes" = "Pinesnakes will loudly hiss and vibrate their tail when disturbed. Observations of this snake in Virginia are extremely rare. Similar to hog-nosed snake that will also hiss but has an upturned nose.";
+//
+//
+//
