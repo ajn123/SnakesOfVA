@@ -13,18 +13,16 @@ import THLabel
 class SnakeCell: UITableViewCell {
     
     let CELL_HEIGHT = 200
-    
   
-  
-  var label: THLabel = {
-    var l = THLabel()
-    l.translatesAutoresizingMaskIntoConstraints = false
-    l.textColor = UIColor(colorLiteralRed: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-    l.font = UIFont(name: "Arial", size: 20.0)
-    l.strokeColor = UIColor.blackColor()
-    l.strokeSize = 3.0
-    return l
-  }()
+    var label: THLabel = {
+      var l = THLabel()
+      l.translatesAutoresizingMaskIntoConstraints = false
+      l.textColor = UIColor(colorLiteralRed: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+      l.font = UIFont(name: "Arial", size: 20.0)
+      l.strokeColor = UIColor.blackColor()
+      l.strokeSize = 3.0
+      return l
+    }()
   
     var detailLabel: THLabel = {
         var detail = THLabel()
@@ -36,9 +34,7 @@ class SnakeCell: UITableViewCell {
         return detail
     }()
     
-    
     var bImage: UIImage!
-    
     
     var snake: Snake!
     
