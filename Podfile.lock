@@ -1,10 +1,13 @@
 PODS:
   - iOS-Slide-Menu (1.5)
+  - THLabel (1.4.7)
 
 DEPENDENCIES:
   - iOS-Slide-Menu
+  - THLabel (~> 1.4)
 
 SPEC CHECKSUMS:
   iOS-Slide-Menu: 40b0cbd8916c42afc755f0869793cd09e7a32102
+  THLabel: 1a23e71d7738abfeacaf22ab409b981209b105ae
 
-COCOAPODS: 0.38.0
+COCOAPODS: 0.39.0

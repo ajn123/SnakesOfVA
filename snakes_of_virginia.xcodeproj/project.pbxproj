@@ -22,7 +22,7 @@
 		A34AE7191BF267D900FBBB19 /* SnakesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34AE7181BF267D900FBBB19 /* SnakesManager.swift */; };
 		A3777E9D1BFB949F00252EE6 /* SnakeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3777E9C1BFB949F00252EE6 /* SnakeCell.swift */; };
 		A3777E9F1BFBA6DE00252EE6 /* SnakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3777E9E1BFBA6DE00252EE6 /* SnakeViewController.swift */; };
-		EB8F7FEAEE97806C17E450A7 /* Pods_snake.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E302E4F12F42BB1643367C58 /* Pods_snake.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		EB8F7FEAEE97806C17E450A7 /* Pods_snake.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E302E4F12F42BB1643367C58 /* Pods_snake.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */

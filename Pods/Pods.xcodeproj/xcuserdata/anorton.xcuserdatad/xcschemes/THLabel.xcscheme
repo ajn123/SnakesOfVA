@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'B4C7D1A6D66F564B21955D9C'
-               BlueprintName = 'iOS-Slide-Menu'
+               BlueprintIdentifier = '63F6037FD11E738C9450A8CD'
+               BlueprintName = 'THLabel'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'iOS_Slide_Menu.framework'>
+               BuildableName = 'THLabel.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

@@ -7,25 +7,32 @@
 //
 
 import UIKit
+import THLabel
+
 
 class SnakeCell: UITableViewCell {
     
     let CELL_HEIGHT = 200
     
-    var label: UILabel = {
-        var l = UILabel()
-        l.translatesAutoresizingMaskIntoConstraints = false
-        l.textColor = UIColor(colorLiteralRed: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        l.font = UIFont(name: "Arial", size: 20.0)
-        
-        return l
-    }()
-    
-    var detailLabel: UILabel = {
-        var detail = UILabel()
+  
+  
+  var label: THLabel = {
+    var l = THLabel()
+    l.translatesAutoresizingMaskIntoConstraints = false
+    l.textColor = UIColor(colorLiteralRed: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+    l.font = UIFont(name: "Arial", size: 20.0)
+    l.strokeColor = UIColor.blackColor()
+    l.strokeSize = 3.0
+    return l
+  }()
+  
+    var detailLabel: THLabel = {
+        var detail = THLabel()
         detail.translatesAutoresizingMaskIntoConstraints = false
         detail.textColor = UIColor(colorLiteralRed: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         detail.font = UIFont(name: "Arial-ItalicMT", size: 16.0)
+        detail.strokeColor = UIColor.blackColor()
+        detail.strokeSize = 3.0
         return detail
     }()
     

@@ -20,23 +20,19 @@ class ViewController: UITableViewController, SlideNavigationControllerDelegate {
       
     }
   
-  func slideNavigationControllerShouldDisplayLeftMenu() -> Bool {
-    return true
-  }
+    func slideNavigationControllerShouldDisplayLeftMenu() -> Bool {
+      return true
+    }
   
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        // print(SnakesManager.instance.snakes[section].count)
         return SnakesManager.instance.snakes[section].count
     }
-    
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         //let cell = tableView.dequeueReusableCellWithIdentifier("snakeCell") as! SnakeCell

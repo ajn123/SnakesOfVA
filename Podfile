@@ -4,6 +4,7 @@ platform :ios, "9.0"
 use_frameworks!
 target 'snake' do
 pod 'iOS-Slide-Menu'
+pod 'THLabel', '~> 1.4'
 
 end
 

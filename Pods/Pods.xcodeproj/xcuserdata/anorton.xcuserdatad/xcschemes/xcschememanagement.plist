@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>THLabel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>iOS-Slide-Menu.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>6F4DA18E7DE325207539106715F91357</key>
+		<key>2BB4DBFB9AEFBA5C8E397339C615DF11</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CBD5D2656DACBDE34C543DA58D9430DE</key>
+		<key>7890C3D10F811BC2D2D5DB669EB1CF6B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ADFFF2B38025A920C7B6FE60A59C0727</key>
 		<dict>
 			<key>primary</key>
 			<true/>
