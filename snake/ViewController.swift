@@ -10,7 +10,13 @@ import UIKit
 import iOS_Slide_Menu
 
 class ViewController: UITableViewController, SlideNavigationControllerDelegate {
-
+  
+  var filteredSnakes = [Snake]()
+  
+  let searchController = UISearchController(searchResultsController: nil)
+  
+  var allSnakes = SnakesManager.instance.snakes.flatMap() { $0.map { $0 } }
+  
     override func viewDidLoad() {
       super.viewDidLoad()
       self.title = "Snakes Of VA"
@@ -18,7 +24,26 @@ class ViewController: UITableViewController, SlideNavigationControllerDelegate {
       self.navigationItem.hidesBackButton = true
       self.tableView.registerClass(SnakeCell.self, forCellReuseIdentifier: "snakeCell")
       
+      
+      // search controller 
+      searchController.searchResultsUpdater = self
+      searchController.dimsBackgroundDuringPresentation = false
+      definesPresentationContext = true
+      tableView.tableHeaderView = searchController.searchBar
+      
+     }
+  
+  func filterContentForSearchText(searchString: String, scope: String = "All") {
+    filteredSnakes.removeAll()
+    
+    filteredSnakes = allSnakes.filter()
+    {
+        snake in
+        return snake.commonName.lowercaseString.containsString(searchString.lowercaseString)
     }
+    
+    tableView.reloadData()
+  }
   
     func slideNavigationControllerShouldDisplayLeftMenu() -> Bool {
       return true
@@ -28,47 +53,61 @@ class ViewController: UITableViewController, SlideNavigationControllerDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+  
+  override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    //print( SnakesManager.instance.header.count)
+    if searchController.active && searchController.searchBar.text != "" {
+      return 1
+    }
+    return SnakesManager.instance.header.count
+  }
+  
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        // print(SnakesManager.instance.snakes[section].count)
-        return SnakesManager.instance.snakes[section].count
+      if searchController.active && searchController.searchBar.text != "" {
+        return filteredSnakes.count
+      }
+      return SnakesManager.instance.snakes[section].count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        //let cell = tableView.dequeueReusableCellWithIdentifier("snakeCell") as! SnakeCell
-        let snake = SnakesManager.instance.snakes[indexPath.section][indexPath.row]
+        var snake: Snake! = nil
+        if searchController.active && searchController.searchBar.text != "" {
+          snake = filteredSnakes[indexPath.row]
+        }
+        else {
+          snake = SnakesManager.instance.snakes[indexPath.section][indexPath.row]
+        }
+      
         let cell = SnakeCell(snake: snake)
-        // print("\(indexPath.row)  \(snake.commonName)")
-        //print(snake.commonName)
-        //  cell.textLabel?.text = snake.commonName
-        
-        //  let imgView = UIImageView(image: snake.primaryImage)
-        //  imgView.contentMode = UIViewContentMode.ScaleAspectFit
-        //cell.backgroundView! = imgView
-        //cell.im = UIImageView(image: snake.primaryImage)
-        // print("B Image is: \(cell.bImage.size)")
         return cell
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let vc = SnakeViewController()
+      if searchController.active && searchController.searchBar.text != "" {
+        vc.title = filteredSnakes[indexPath.row].commonName
+        vc.snake = filteredSnakes[indexPath.row]
+      }
+      else{
         vc.title = SnakesManager.instance.snakes[indexPath.section][indexPath.row].commonName
         vc.snake = SnakesManager.instance.snakes[indexPath.section][indexPath.row]
+      }
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
+  
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 250.0
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+      if searchController.active || searchController.searchBar.text != "" {
+        return nil
+      }
         return SnakesManager.instance.header[section]
     }
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        //print( SnakesManager.instance.header.count)
-        return SnakesManager.instance.header.count
-    }
+  
     
     
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -83,26 +122,21 @@ class ViewController: UITableViewController, SlideNavigationControllerDelegate {
     override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         
         if(section == 0) {
-            
-            
             //view.tintColor = UIColor.redColor()
-
-          
             view.tintColor = UIColor.init(colorLiteralRed: 1.0, green: 0.0, blue: 0.0, alpha: 0.2)
             
         }
-            
         else {
-            
             //view.tintColor = UIColor.blueColor()
-            
             view.tintColor = UIColor.init(colorLiteralRed: 0.0, green: 0.0, blue: 1.0, alpha: 0.2)
-            
-        } 
-        
+        }
     }
-    
-    
-    
+}
+
+
+extension ViewController: UISearchResultsUpdating {
+  func updateSearchResultsForSearchController(searchController: UISearchController) {
+    filterContentForSearchText(searchController.searchBar.text!)
+  }
 }
 

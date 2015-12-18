@@ -153,8 +153,6 @@ class SnakeViewController: UIViewController {
               NSLayoutConstraint(item: detailLabel, attribute: .Width, relatedBy: .Equal,
                 toItem: self.screenScrollView, attribute: .Width, multiplier: 1.0, constant: -5.0)
           
-          
-          
             let rightConstraint =
               NSLayoutConstraint(item: detailLabel, attribute: .Left, relatedBy: .Equal,
                 toItem: screenScrollView, attribute: .Left, multiplier: 1.0, constant: 5)

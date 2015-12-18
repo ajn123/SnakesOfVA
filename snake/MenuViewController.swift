@@ -22,6 +22,8 @@ class MenuViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     self.title = "Snakes Of VA"
+    
+    
   }
   
 
@@ -39,13 +41,13 @@ class MenuViewController: UITableViewController {
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     //let cell = tableView.dequeueReusableCellWithIdentifier("snakeCell") as! SnakeCell
-    let cell =  UITableViewCell()
+    var cell =  UITableViewCell()
     switch indexPath.row {
     case 0...5:
       
       cell.textLabel?.text = menuItems[indexPath.row]
     default:
-      cell.imageView?.image = UIImage.scaleUIImageToSize(UIImage(named: "vhs_app_logo")!, size: CGSize(width: 100, height: 100))
+      cell = SnakeCell(img: UIImage(named: "vhs_app_logo")!)
     }
     return cell
   }
@@ -64,9 +66,8 @@ class MenuViewController: UITableViewController {
         SlideNavigationController.sharedInstance().popAllAndSwitchToViewController(
           ViewController(), withCompletion: nil)
       }
-    case indexPath.row - 1:
-      // TODO:
-      
+    case menuItems.count - 1:
+      // Do nothing for clicking the logo
       break
     default:
         let str = localizedStrings[indexPath.row]
@@ -77,9 +78,13 @@ class MenuViewController: UITableViewController {
   }
   
   override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-    if(indexPath.row < indexdd)
+    if(indexPath.row < menuItems.count - 1)
+    {
+      print(indexPath.row)
+      return UITableViewCell().bounds.height
+    }
     
-    return 100.0
+    return 200.0
   }
 
 }

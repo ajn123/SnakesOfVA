@@ -22,6 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       window?.backgroundColor = UIColor.whiteColor()
           
       let slideNavVC = SlideNavigationController(rootViewController: ViewController())
+      SlideNavigationController.sharedInstance().portraitSlideOffset = 60.0
+          
       window?.rootViewController = slideNavVC
           
       SlideNavigationController.sharedInstance().leftMenu = UINavigationController(rootViewController: MenuViewController())

@@ -8,6 +8,7 @@
 
 import UIKit
 import THLabel
+import iOS_Slide_Menu
 
 
 class SnakeCell: UITableViewCell {
@@ -51,9 +52,51 @@ class SnakeCell: UITableViewCell {
         
         setLayout()
     }
+  
+  convenience init(img: UIImage) {
+    self.init()
+    self.snake = nil
+    self.label.text = ""
+    self.detailLabel.text = ""
     
+    // self.bImage =  snake.primaryImage!
+    // self.bImage =  UIImage(named: "northern_copperhead")!
+    // print(snake.commonName)
+    self.bImage = img
+    
+    let imageView1 = UIImageView(image: bImage)
+    imageView?.contentMode = .ScaleAspectFit
+    imageView1.contentMode = .ScaleAspectFit
+    
+    imageView1.translatesAutoresizingMaskIntoConstraints = false
+    
+    let dict = ["image": imageView1, "label": label, "detailLabel": detailLabel]
+    
+    
+    self.addSubview(imageView1)
+    
+    let c1 =
+    NSLayoutConstraint.constraintsWithVisualFormat("V:|-[image]-|",
+      options: NSLayoutFormatOptions(), metrics: nil, views: dict)
+    
+    print(self.bounds.width)
+    
+    
+    var centerScreen = 20
+    var rightAlignment: Int = Int(SlideNavigationController.sharedInstance().portraitSlideOffset)
+      + centerScreen
+    
+    let c2 =
+    NSLayoutConstraint.constraintsWithVisualFormat("H:|-\(centerScreen)-[image]-\(rightAlignment)-|",
+      options: NSLayoutFormatOptions(), metrics: nil, views: dict)
+    
+    self.addConstraints(c1)
+    self.addConstraints(c2)
+
+  }
+  
  
-    
+  
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setLayout()
