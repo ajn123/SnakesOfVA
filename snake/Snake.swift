@@ -16,7 +16,8 @@ class Snake {
     var scientificName:String
     
     var description: String!  = ""
-    
+    var primaryImageName: String
+  
     var primaryImage:UIImage?
     
 //    var mapImage: UIImage?
@@ -25,6 +26,7 @@ class Snake {
     init(commonName: String, scientificName: String, primaryImage: String) {
         self.commonName = commonName
         self.scientificName = scientificName
+        self.primaryImageName = primaryImage.stringByReplacingOccurrencesOfString(".png", withString: "")
         self.primaryImage = UIImage(named: primaryImage)
        
     }

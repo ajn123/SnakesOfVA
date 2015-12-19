@@ -104,7 +104,7 @@ class ViewController: UITableViewController, SlideNavigationControllerDelegate {
       if searchController.active || searchController.searchBar.text != "" {
         return nil
       }
-        return SnakesManager.instance.header[section]
+      return SnakesManager.instance.header[section]
     }
     
   

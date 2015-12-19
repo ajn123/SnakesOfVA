@@ -13,15 +13,15 @@ class SnakeViewController: UIViewController {
     var snake: Snake! = nil
   
     let titleLabelVerticalDistance: CGFloat = 10
-    let detailLabelVerticalDistance: CGFloat = 2
+    let detailLabelVerticalDistance: CGFloat = 4
     
-    let textTitles = ["Description", "Habits"]
+    let textTitles = ["Length", "Description", "Habitat", "Habits", "Notes"]
     
-    let mapViewImageHeight: CGFloat = 200.0
+    let mapViewImageHeight: CGFloat = 260.0
     
     lazy var slideShow: UIScrollView = {
         var slide = UIScrollView(frame: CGRect(x: 0, y: 0,
-            width: UIScreen.mainScreen().bounds.width, height: 200))
+            width: UIScreen.mainScreen().bounds.width, height: 260))
         slide.pagingEnabled = true
         slide.delegate = self
         return slide
@@ -38,7 +38,7 @@ class SnakeViewController: UIViewController {
         var pg = UIPageControl()
         pg.pageIndicatorTintColor = UIColor.orangeColor()
         pg.translatesAutoresizingMaskIntoConstraints = false
-        pg.numberOfPages = 5
+        pg.numberOfPages = 0
         return pg
     }()
     
@@ -47,8 +47,18 @@ class SnakeViewController: UIViewController {
         
         return screen
     }()
-    
+  
+  lazy var  descriptionLabel: UILabel = {
+    var dl = UILabel()
+    dl.translatesAutoresizingMaskIntoConstraints = false
+    dl.font = UIFont(name: "Avenir-Book", size: 16.0)
+    dl.textColor = UIColor.whiteColor()
+    dl.numberOfLines = 0
+    return dl
+  }()
+  
     override func viewDidLoad() {
+      
         self.view.backgroundColor = UIColor.blackColor()
         
         self.edgesForExtendedLayout = UIRectEdge.Bottom.intersect(UIRectEdge.Top)
@@ -56,33 +66,55 @@ class SnakeViewController: UIViewController {
         self.view.addSubview(screenScrollView)
         
         var x: CGFloat = 0.0
+        var num = 2 // start at the second image
+      
+        var snakeImage: UIImage? = snake.primaryImage
+      
+        while(snakeImage != nil) {
+          let imv =
+          UIImageView(frame: CGRect(x: CGFloat(x + 10), y: CGFloat(0.0),
+            width: CGFloat(screenWidth - 20), height: CGFloat(mapViewImageHeight)))
+          
+          imv.image = snakeImage!
+          
+          imv.contentMode = .ScaleAspectFit
+          slideShow.addSubview(imv)
+          x = x + screenWidth
+          pageControl.numberOfPages = num - 2
+          snakeImage = UIImage(named: "\(snake.primaryImageName)\(num)")
+          num += 1
+          pageControl.numberOfPages += 1
 
-        for index in 1...5 {
-            let imv =
-              UIImageView(frame: CGRect(x: CGFloat(x), y: CGFloat(0.0),
-                width: CGFloat(screenWidth), height: CGFloat(200)))
-          
-          var snakeImage: UIImage? = UIImage(named: "northern_copperhead_\(index)")
-          
-          if let snImg = snakeImage {
-            imv.image = snImg
-          }
-          else {
-            imv.image = UIImage(named: "northern_copperhead")!
-          }
-          
-
-            imv.contentMode = .ScaleAspectFit
-            slideShow.addSubview(imv)
-            x = x + screenWidth
         }
         
-        slideShow.contentSize = CGSize(width: x, height: 200.0)
+        slideShow.contentSize = CGSize(width: x, height: mapViewImageHeight)
         
         self.screenScrollView.addSubview(slideShow)
         self.screenScrollView.addSubview(mapImage)
         self.screenScrollView.addSubview(pageControl)
+        self.screenScrollView.addSubview(descriptionLabel)
+        descriptionLabel.text = "this is the sample text"
+      
+        // Constraints for Label
+        let descriptionLabelConstraint =
+        NSLayoutConstraint(item: descriptionLabel, attribute: .Top, relatedBy: .Equal,
+          toItem: pageControl, attribute: .Bottom, multiplier: 1, constant: detailLabelVerticalDistance)
+      
+        let descriptionLabelConstraint2 =
+        NSLayoutConstraint(item: descriptionLabel, attribute: .Width, relatedBy: .Equal,
+          toItem: self.screenScrollView, attribute: .Width, multiplier: 1.0, constant: -5.0)
+      
+        let descriptionLabelConstraint3 =
+        NSLayoutConstraint(item: descriptionLabel, attribute: .Left, relatedBy: .Equal,
+          toItem: screenScrollView, attribute: .Left, multiplier: 1.0, constant: 5)
         
+        let descriptionLabelConstraint4 =
+        NSLayoutConstraint(item: descriptionLabel, attribute: .Right, relatedBy: .Equal,
+          toItem: screenScrollView, attribute: .Right, multiplier: 1.0, constant: 5)
+        // ****
+        
+      
+      
     
         let pageControlCenter =
           NSLayoutConstraint(item: self.pageControl, attribute: .CenterX, relatedBy: .Equal,
@@ -96,11 +128,11 @@ class SnakeViewController: UIViewController {
         
         let mapImageWidth =
           NSLayoutConstraint(item: self.mapImage, attribute: .Width, relatedBy: .Equal,
-            toItem: screenScrollView, attribute: .Width, multiplier: 1.0, constant: -20)
+            toItem: screenScrollView, attribute: .Width, multiplier: 1.0, constant: -40)
         
         let mapImageTop =
         NSLayoutConstraint(item: self.mapImage, attribute: .Top, relatedBy: .Equal,
-            toItem: pageControl, attribute: .Bottom, multiplier: 1.0, constant: titleLabelVerticalDistance)
+            toItem: descriptionLabel, attribute: .Bottom, multiplier: 1.0, constant: detailLabelVerticalDistance)
         
         let mapImageCenterX =
         NSLayoutConstraint(item: self.mapImage, attribute: .CenterX, relatedBy: .Equal,
@@ -108,17 +140,32 @@ class SnakeViewController: UIViewController {
         
         let mapImageHeight =
         NSLayoutConstraint(item: self.mapImage, attribute: .Height, relatedBy: .Equal,
-            toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: mapViewImageHeight)
+            toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 200)
         
         self.screenScrollView.addConstraints([mapImageWidth, mapImageTop,mapImageHeight, mapImageCenterX])
-        
-        self.mapImage.image =
-            UIImage.scaleUIImageToSize(UIImage(named: "copperheadMap")!,
-            size: CGSize(width: screenWidth, height: mapViewImageHeight))
-        
+      
+        self.screenScrollView.addConstraints(
+          [descriptionLabelConstraint4, descriptionLabelConstraint3,descriptionLabelConstraint2,descriptionLabelConstraint])
+      
+        self.mapImage.contentMode = .ScaleAspectFit
+    
+        let snakeName = snake.commonName.lowercaseString.stringByReplacingOccurrencesOfString(" ", withString: "_")
+        let mapImg = UIImage(named: "\(snakeName)_map")
+      
+        self.mapImage.backgroundColor = UIColor.whiteColor()
+        if let im = mapImg {
+          self.mapImage.image = im
+        }
+        else {
+          self.mapImage.image = UIImage(named: "copperhead_map_app")
+        }
+      
+      
+      
+      
         var currentView: UIView = self.mapImage
         
-        for index in 0..<self.textTitles.count {
+        for (index, item) in self.textTitles.enumerate() {
             let label = UILabel()
             label.translatesAutoresizingMaskIntoConstraints = false
             
@@ -132,7 +179,7 @@ class SnakeViewController: UIViewController {
             label.text = textTitles[index]
             detailLabel.textColor = UIColor.whiteColor()
             
-            detailLabel.text = NSLocalizedString("cornSnakeDescription", comment: "description")
+            detailLabel.text = NSLocalizedString("\(self.snake.commonName)_\(item)", comment: "description")
                 
             detailLabel.font = UIFont(name: "Avenir-Book", size: 16.0)
             

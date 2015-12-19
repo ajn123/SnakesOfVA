@@ -80,7 +80,6 @@ class MenuViewController: UITableViewController {
   override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
     if(indexPath.row < menuItems.count - 1)
     {
-      print(indexPath.row)
       return UITableViewCell().bounds.height
     }
     

@@ -24,10 +24,8 @@ class SnakesManager {
         var smallSnakes = [Snake]()
         var mediumSnakes = [Snake]()
         var largeSnakes = [Snake]()
-       
         
-        
-// Venomous Species
+        // Venomous Species
         venomousSnakes.append(
           Snake(commonName: "Northern Copperhead", scientificName: "Agkistrodon contortrix mokasen", primaryImage: "copperhead16to9ratio"))
         
@@ -79,7 +77,7 @@ class SnakesManager {
             Snake(commonName: "Southeastern Crowned Snake", scientificName: "Tantilla coronata", primaryImage: "southeastern_crowned_snake.png"))
         
         smallSnakes.append(
-            Snake(commonName: "Mountain Earthsnake", scientificName: "Virginia valeriae pulchra", primaryImage: "mountain_earthsnake1.png"))
+            Snake(commonName: "Mountain Earthsnake", scientificName: "Virginia valeriae pulchra", primaryImage: "mountain_earthsnake.png"))
         
         smallSnakes.append(
             Snake(commonName: "Eastern Smooth Earthsnake", scientificName: "Virginia valeriae valeriae", primaryImage: "eastern_smooth_earthsnake.png"))
