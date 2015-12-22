@@ -8,16 +8,6 @@
 
 
 
-
-"cornSnake Description" = "The corn snake is named for the species' regularpresence near grain stores, where it preys on mice and rats that eat harvestedcorn.  The Oxford English Dictionary cites this usage as far back as 1675.Some sources maintain that the corn snake is so-named because the distinctive,nearly-checkered pattern of the snakes belly scales resembles the kernels of variegated corn  regularpresence near grain stores, where it preys on mice and rats that eat harvestedcorn.  The Oxford English Dictionary cites this usage as far back as 1675.Some sources maintain that the corn snake is so-named because the distinctive,nearly-checkered pattern of the snakes belly scales resembles the kernels of variegated corn  regularpresence near grain stores, where it preys on mice and rats that eat harvestedcorn.  The Oxford English Dictionary cites this usage as far back as 1675.Some sources maintain that the corn snake is so-named because the distinctive,nearly-checkered pattern of the snakes belly scales resembles the kernels of variegated corn  regularpresence near grain stores, where it preys on mice and rats that eat harvestedcorn.  The Oxford English Dictionary cites this usage as far back as 1675.Some sources maintain that the corn snake is so-named because the distinctive,nearly-checkered pattern of the snakes belly scales resembles the kernels of variegated corn";
-
-
-"cornSnakeDescription" = "The corn snake is named for the species' regularpresence near grain stores, where it preys on mice and rats that eat harvestedcorn.  The Oxford English Dictionary cites this usage as far back as 1675.Some sources maintain that the corn snake is so-named because the distinctive,nearly-checkered pattern of the snakes belly scales resembles the kernels of variegated corn  regularpresence near grain stores, where it preys on mice and rats that eat harvestedcorn.  The Oxford English Dictionary cites this usage as far back as 1675.Some sources maintain that the corn snake is so-named because the distinctive,nearly-checkered pattern of the snakes belly scales resembles the kernels of variegated corn  regularpresence near grain stores, where it preys on mice and rats that eat harvestedcorn.  The Oxford English Dictionary cites this usage as far back as 1675.Some sources maintain that the corn snake is so-named because the distinctive,nearly-checkered pattern of the snakes belly scales resembles the kernels of variegated corn";
-
-
-
-
-
 "Snakes_About" = "  Regardless of their source, misconceptions about snakes have made them among the most persecuted of all animals. A common reaction to a snake is to kill it on sight whether or not it poses a danger. However, the fact is that most snakes are harmless, and even dangerous ones would rather flee than fight. Once we begin to learn about snakes, we can replace our misconceptions with facts and our fears with curiosity, and we can begin to appreciate their important roles in our environment. Snakes are reptiles and belong to the same group of animals as lizards, turtles, and crocodiles. Reptiles have dry scales that are shed periodically. Sometimes confused with reptiles, amphibians such as frogs and salamanders always lack scales and most have moist skin. Unlike mammals and birds, reptiles cannot generate their own body heat and depend on outside sources to raise their body temperature. This trait obligates them to wait out long periods of extensive cold and hot conditions, a habit that contributes to their secretive nature. Snakes differ from other reptiles by having no legs, external ears, or eyelids. The most notable characteristic of a snake is its extremely long, slender body. A snake's body allows it to effortlessly climb, swim, and slip into the smallest spaces. Instead of eyelids, snakes have a clear scale covering each eye. The shedding of this scale causes the eye to cloud over with a bluish tint for a few days. \n  Worldwide there are over 3,000 snake species distributed throughout every continent except Antarctica. There are 34 types in Virginia. They occur across the Commonwealth from coastal marshes, agricultural fields, and abandoned buildings, to Piedmont forests and mountain ridge tops. Within these habitats, snakes play important roles as both predator and prey. All snakes eat other animals, and none feed on plants. Snakes are able to swallow prey whole because their jaws are loosely attached together. Major prey includes insects, fish, amphibians, other reptiles, birds and their eggs, and rodents. Some snakes have very specialized diets of only one or two prey types. Certain mammals, birds, and humans are significant predators of snakes.";
 
 
@@ -52,6 +42,9 @@
 // Agkistrodon contortrix mokasen
 //
 "Northern Copperhead_Length" = "Up to 48 in. (122 cm)";
+
+// Example to add Image Description
+// "Northern Copperhead_ImageDescription" = "This was made by John";
 
 "Northern Copperhead_Description" = "A heavy bodied snake, pinkish to tan in color with several dark hourglass bands across the back. Juveniles look similar to adults but have a bright yellow tail tip.";
 
@@ -122,6 +115,7 @@
 //// Southern Ring-necked Snake
 //// Diadophis punctatus punctatus
 //
+
 "Southern Ring-necked Snake_Length" = "Up to 20 in. (51 cm)";
 
 "Southern Ring-necked Snake_Description" = "A small, gray to black snake with a yellow to white collar around neck. Belly is yellow sometimes with small black spots. Scales are smooth. Young similar to adults.";

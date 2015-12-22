@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,7 +17,18 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_file_1242x2208" translatesAutoresizingMaskIntoConstraints="NO" id="7rD-H8-5qU">
+                                <rect key="frame" x="0.0" y="0.0" width="610" height="600"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="7rD-H8-5qU" secondAttribute="trailing" constant="-30" id="VX8-Nu-lMJ"/>
+                            <constraint firstItem="7rD-H8-5qU" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-20" id="ZIg-2f-Oy8"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="7rD-H8-5qU" secondAttribute="bottom" id="drU-pI-zks"/>
+                            <constraint firstItem="7rD-H8-5qU" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" id="r4r-cf-B5U"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +36,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="launch_file_1242x2208" width="1242" height="2208"/>
+    </resources>
 </document>

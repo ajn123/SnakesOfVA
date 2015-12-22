@@ -87,7 +87,8 @@ class SnakeViewController: UIViewController {
         self.screenScrollView.addSubview(mapImage)
         self.screenScrollView.addSubview(pageControl)
         self.screenScrollView.addSubview(descriptionLabel)
-        descriptionLabel.text = "this is the sample text"
+      
+      
       
         // Constraints for Label
         let descriptionLabelConstraint =
@@ -106,6 +107,16 @@ class SnakeViewController: UIViewController {
         NSLayoutConstraint(item: descriptionLabel, attribute: .Right, relatedBy: .Equal,
           toItem: screenScrollView, attribute: .Right, multiplier: 1.0, constant: 5)
         // *********************************************************************************
+      
+        var imageDescription = NSLocalizedString("\(self.snake.commonName)_ImageDescription", comment: "description")
+      
+        if(imageDescription != "\(self.snake.commonName)_ImageDescription")
+        {
+          descriptionLabel.text = imageDescription
+        }
+        else {
+          descriptionLabel.text = ""
+        }
     
         let pageControlCenter =
           NSLayoutConstraint(item: self.pageControl, attribute: .CenterX, relatedBy: .Equal,

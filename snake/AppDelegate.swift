@@ -14,7 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication,
          didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
       
@@ -22,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       window?.backgroundColor = UIColor.whiteColor()
           
       let slideNavVC = SlideNavigationController(rootViewController: ViewController())
-      SlideNavigationController.sharedInstance().portraitSlideOffset = 60.0
+      SlideNavigationController.sharedInstance().portraitSlideOffset = 0.0
           
       window?.rootViewController = slideNavVC
           
