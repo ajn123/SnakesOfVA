@@ -66,27 +66,21 @@ class SnakeViewController: UIViewController {
         self.view.addSubview(screenScrollView)
         
         var x: CGFloat = 0.0
-        var num = 2 // start at the second image
-      
-        var snakeImage: UIImage? = snake.primaryImage
-      
-        while(snakeImage != nil) {
+
+        for imgName in snake.snakeImageNames {
           let imv =
           UIImageView(frame: CGRect(x: CGFloat(x + 10), y: CGFloat(0.0),
             width: CGFloat(screenWidth - 20), height: CGFloat(mapViewImageHeight)))
           
-          imv.image = snakeImage!
+          imv.image = UIImage(named: imgName)!
           
           imv.contentMode = .ScaleAspectFit
           slideShow.addSubview(imv)
           x = x + screenWidth
-          pageControl.numberOfPages = num - 2
-          snakeImage = UIImage(named: "\(snake.primaryImageName)\(num)")
-          num += 1
-          pageControl.numberOfPages += 1
-
         }
-        
+      
+        pageControl.numberOfPages = snake.snakeImageNames.count
+    
         slideShow.contentSize = CGSize(width: x, height: mapViewImageHeight)
         
         self.screenScrollView.addSubview(slideShow)
@@ -111,10 +105,7 @@ class SnakeViewController: UIViewController {
         let descriptionLabelConstraint4 =
         NSLayoutConstraint(item: descriptionLabel, attribute: .Right, relatedBy: .Equal,
           toItem: screenScrollView, attribute: .Right, multiplier: 1.0, constant: 5)
-        // ****
-        
-      
-      
+        // *********************************************************************************
     
         let pageControlCenter =
           NSLayoutConstraint(item: self.pageControl, attribute: .CenterX, relatedBy: .Equal,
@@ -150,16 +141,12 @@ class SnakeViewController: UIViewController {
         self.mapImage.contentMode = .ScaleAspectFit
     
         let snakeName = snake.commonName.lowercaseString.stringByReplacingOccurrencesOfString(" ", withString: "_")
-        let mapImg = UIImage(named: "\(snakeName)_map")
+        let mapImg = UIImage(named: snake.mapImageName)
       
-        self.mapImage.backgroundColor = UIColor.whiteColor()
+        self.mapImage.backgroundColor = UIColor.blackColor()
         if let im = mapImg {
           self.mapImage.image = im
         }
-        else {
-          self.mapImage.image = UIImage(named: "copperhead_map_app")
-        }
-      
       
       
       
@@ -231,7 +218,6 @@ class SnakeViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         var height: CGFloat = 0.0
-        print(animated)
         for item in screenScrollView.subviews {
             height += item.bounds.height
         }

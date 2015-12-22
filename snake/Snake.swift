@@ -19,15 +19,22 @@ class Snake {
     var primaryImageName: String
   
     var primaryImage:UIImage?
-    
+  
+    var mapImageName: String = ""
+  
+    var snakeImageNames = [String]()
+  
 //    var mapImage: UIImage?
 //    var snakeSlideShow: [Snake]?
 //    
-    init(commonName: String, scientificName: String, primaryImage: String) {
+  init(commonName: String, scientificName: String, primaryImage: String, mapName: String = "",
+       imageNames: [String] = []) {
         self.commonName = commonName
         self.scientificName = scientificName
         self.primaryImageName = primaryImage.stringByReplacingOccurrencesOfString(".png", withString: "")
         self.primaryImage = UIImage(named: primaryImage)
+        self.mapImageName = mapName
+        self.snakeImageNames = imageNames
        
     }
     

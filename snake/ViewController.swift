@@ -78,7 +78,6 @@ class ViewController: UITableViewController, SlideNavigationControllerDelegate {
         else {
           snake = SnakesManager.instance.snakes[indexPath.section][indexPath.row]
         }
-      
         let cell = SnakeCell(snake: snake)
         return cell
     }
