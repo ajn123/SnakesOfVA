@@ -108,7 +108,7 @@ class SnakeViewController: UIViewController {
           toItem: screenScrollView, attribute: .Right, multiplier: 1.0, constant: 5)
         // *********************************************************************************
       
-        var imageDescription = NSLocalizedString("\(self.snake.commonName)_ImageDescription", comment: "description")
+        let imageDescription = NSLocalizedString("\(self.snake.commonName)_ImageDescription", comment: "description")
       
         if(imageDescription != "\(self.snake.commonName)_ImageDescription")
         {

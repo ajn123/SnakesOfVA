@@ -79,16 +79,13 @@ class SnakeCell: UITableViewCell {
     NSLayoutConstraint.constraintsWithVisualFormat("V:|-[image]-|",
       options: NSLayoutFormatOptions(), metrics: nil, views: dict)
     
-    print(self.bounds.width)
-    
-    
-    var centerScreen = 20
-    var rightAlignment: Int = Int(SlideNavigationController.sharedInstance().portraitSlideOffset)
+    let centerScreen = 20
+    let rightAlignment: Int = Int(SlideNavigationController.sharedInstance().portraitSlideOffset)
       + centerScreen
     
     let c2 =
-    NSLayoutConstraint.constraintsWithVisualFormat("H:|-\(centerScreen)-[image]-\(rightAlignment)-|",
-      options: NSLayoutFormatOptions(), metrics: nil, views: dict)
+      NSLayoutConstraint.constraintsWithVisualFormat("H:|-\(centerScreen)-[image]-\(rightAlignment)-|",
+        options: NSLayoutFormatOptions(), metrics: nil, views: dict)
     
     self.addConstraints(c1)
     self.addConstraints(c2)
