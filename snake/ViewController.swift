@@ -20,10 +20,10 @@ class ViewController: UITableViewController, SlideNavigationControllerDelegate {
     override func viewDidLoad() {
       super.viewDidLoad()
       self.title = "Snakes Of VA"
+      
       // remove back button title
       self.navigationItem.hidesBackButton = true
       self.tableView.registerClass(SnakeCell.self, forCellReuseIdentifier: "snakeCell")
-      
       
       // search controller 
       searchController.searchResultsUpdater = self
@@ -33,18 +33,7 @@ class ViewController: UITableViewController, SlideNavigationControllerDelegate {
       
      }
   
-  func filterContentForSearchText(searchString: String, scope: String = "All") {
-    filteredSnakes.removeAll()
-    
-    filteredSnakes = allSnakes.filter()
-    {
-        snake in
-        return snake.commonName.lowercaseString.containsString(searchString.lowercaseString)
-    }
-    
-    tableView.reloadData()
-  }
-  
+ 
     func slideNavigationControllerShouldDisplayLeftMenu() -> Bool {
       return true
     }
@@ -54,13 +43,13 @@ class ViewController: UITableViewController, SlideNavigationControllerDelegate {
         // Dispose of any resources that can be recreated.
     }
   
-  override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-    //print( SnakesManager.instance.header.count)
-    if searchController.active && searchController.searchBar.text != "" {
-      return 1
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+      //print( SnakesManager.instance.header.count)
+      if searchController.active && searchController.searchBar.text != "" {
+        return 1
+      }
+      return SnakesManager.instance.header.count
     }
-    return SnakesManager.instance.header.count
-  }
   
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        // print(SnakesManager.instance.snakes[section].count)
@@ -72,10 +61,12 @@ class ViewController: UITableViewController, SlideNavigationControllerDelegate {
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var snake: Snake! = nil
+        // if the user is searching, return the filtered snake array
         if searchController.active && searchController.searchBar.text != "" {
           snake = filteredSnakes[indexPath.row]
         }
-        else {
+        else
+        {
           snake = SnakesManager.instance.snakes[indexPath.section][indexPath.row]
         }
         let cell = SnakeCell(snake: snake)
@@ -96,7 +87,7 @@ class ViewController: UITableViewController, SlideNavigationControllerDelegate {
     }
   
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 250.0
+        return 250.0 // cell height of snakes
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -105,37 +96,62 @@ class ViewController: UITableViewController, SlideNavigationControllerDelegate {
       }
       return SnakesManager.instance.header[section]
     }
-    
   
+  
+  
+  override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    let view = UIView()
+    let label = UILabel(frame: CGRect(x: 5, y: 5, width: screenWidth, height: 29))
+    label.font = UIFont.boldSystemFontOfSize(15.0)
+    view.addSubview(label)
+    label.text = SnakesManager.instance.header[section]
     
-    
-    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        let c = cell as! SnakeCell
-  //      print("B Image is: \(c.bImage.size)")
-        c.bImage = UIImage.scaleUIImageToSize(c.bImage, size: c.frame.size)
-  //      print("B2 Image is: \(c.bImage.size)")
+    if(section == 0) {
+      view.backgroundColor = UIColor.init(colorLiteralRed: 1.0, green: 0.0, blue: 0.0, alpha: 0.2)
+    }
+    else {
+      view.backgroundColor = UIColor.init(colorLiteralRed: 0.0, green: 0.0, blue: 1.0, alpha: 0.2)
     }
     
-    // Set the section background color
+    return view
+  }
+  
+  
+    // rescales the image to match aspect ratio before display
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell,
+      forRowAtIndexPath indexPath: NSIndexPath) {
+        let c = cell as! SnakeCell
+        c.bImage = UIImage.scaleUIImageToSize(c.bImage, size: c.frame.size)
+   }
     
+    // Set the section background color
     override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         
-        if(section == 0) {
-            //view.tintColor = UIColor.redColor()
-            view.tintColor = UIColor.init(colorLiteralRed: 1.0, green: 0.0, blue: 0.0, alpha: 0.2)
-            
-        }
-        else {
-            //view.tintColor = UIColor.blueColor()
-            view.tintColor = UIColor.init(colorLiteralRed: 0.0, green: 0.0, blue: 1.0, alpha: 0.2)
-        }
+      
     }
 }
 
 
+/**
+  This code takes care of all the searching for snakes based on the 
+ users input.
+*/
+
 extension ViewController: UISearchResultsUpdating {
   func updateSearchResultsForSearchController(searchController: UISearchController) {
     filterContentForSearchText(searchController.searchBar.text!)
+  }
+  
+  func filterContentForSearchText(searchString: String, scope: String = "All") {
+    filteredSnakes.removeAll()
+    
+    filteredSnakes = allSnakes.filter()
+      {
+        snake in
+        return snake.commonName.lowercaseString.containsString(searchString.lowercaseString)
+    }
+    
+    tableView.reloadData()
   }
 }
 

@@ -88,6 +88,50 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7F08FA821C2CB09C002A7307 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				A34AE7041BF260AC00FBBB19 /* AppDelegate.swift */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		7F08FA831C2CB0A9002A7307 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A34AE7181BF267D900FBBB19 /* SnakesManager.swift */,
+				A34AE7161BF264FE00FBBB19 /* Snake.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		7F08FA841C2CB0BF002A7307 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A3777E9C1BFB949F00252EE6 /* SnakeCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		7F08FA851C2CB0D2002A7307 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7F2A300F1C18165100745E3F /* MenuViewController.swift */,
+				7FD7C9261C193AA900E38BF7 /* SnakeInformationViewController.swift */,
+				A3777E9E1BFBA6DE00252EE6 /* SnakeViewController.swift */,
+				A34AE7061BF260AC00FBBB19 /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		7F08FA861C2CB0E4002A7307 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				7FFBFC391C2142980036C0E2 /* Constants.swift */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
 		A34AE6F81BF260AC00FBBB19 = {
 			isa = PBXGroup;
 			children = (
@@ -109,22 +153,18 @@
 		A34AE7031BF260AC00FBBB19 /* snake */ = {
 			isa = PBXGroup;
 			children = (
+				7F08FA861C2CB0E4002A7307 /* Constants */,
+				7F08FA851C2CB0D2002A7307 /* Controllers */,
+				7F08FA841C2CB0BF002A7307 /* Views */,
+				7F08FA831C2CB0A9002A7307 /* Models */,
+				7F08FA821C2CB09C002A7307 /* AppDelegate */,
 				21CC23AB1C083BDE003EBA8C /* Extensions */,
-				A34AE7041BF260AC00FBBB19 /* AppDelegate.swift */,
-				A34AE7061BF260AC00FBBB19 /* ViewController.swift */,
 				A34AE7081BF260AC00FBBB19 /* Main.storyboard */,
 				A34AE70B1BF260AC00FBBB19 /* Assets.xcassets */,
 				A34AE70D1BF260AC00FBBB19 /* LaunchScreen.storyboard */,
 				A34AE7101BF260AC00FBBB19 /* Info.plist */,
-				A34AE7161BF264FE00FBBB19 /* Snake.swift */,
-				A34AE7181BF267D900FBBB19 /* SnakesManager.swift */,
-				A3777E9C1BFB949F00252EE6 /* SnakeCell.swift */,
-				A3777E9E1BFBA6DE00252EE6 /* SnakeViewController.swift */,
 				21BACCFE1C15827E009823BD /* Localizable.strings */,
-				7F2A300F1C18165100745E3F /* MenuViewController.swift */,
 				A34AE7021BF260AC00FBBB19 /* Products */,
-				7FD7C9261C193AA900E38BF7 /* SnakeInformationViewController.swift */,
-				7FFBFC391C2142980036C0E2 /* Constants.swift */,
 			);
 			path = snake;
 			sourceTree = "<group>";

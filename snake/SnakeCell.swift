@@ -65,7 +65,6 @@ class SnakeCell: UITableViewCell {
     self.bImage = img
     
     let imageView1 = UIImageView(image: bImage)
-    imageView?.contentMode = .ScaleAspectFit
     imageView1.contentMode = .ScaleAspectFit
     
     imageView1.translatesAutoresizingMaskIntoConstraints = false
@@ -75,16 +74,20 @@ class SnakeCell: UITableViewCell {
     
     self.addSubview(imageView1)
     
-    let c1 =
-    NSLayoutConstraint.constraintsWithVisualFormat("V:|-[image]-|",
-      options: NSLayoutFormatOptions(), metrics: nil, views: dict)
-    
+   
     let centerScreen = 20
     let rightAlignment: Int = Int(SlideNavigationController.sharedInstance().portraitSlideOffset)
       + centerScreen
     
+    
+    let c1 =
+    NSLayoutConstraint.constraintsWithVisualFormat("V:|-[image]-|",
+      options: NSLayoutFormatOptions(), metrics: nil, views: dict)
+    
+    
     let c2 =
-      NSLayoutConstraint.constraintsWithVisualFormat("H:|-\(centerScreen)-[image]-\(rightAlignment)-|",
+      NSLayoutConstraint.constraintsWithVisualFormat(
+        "H:|-\(centerScreen)-[image]-\(rightAlignment)-|",
         options: NSLayoutFormatOptions(), metrics: nil, views: dict)
     
     self.addConstraints(c1)

@@ -24,9 +24,7 @@ class Snake {
   
     var snakeImageNames = [String]()
   
-//    var mapImage: UIImage?
-//    var snakeSlideShow: [Snake]?
-//    
+
   init(commonName: String, scientificName: String, primaryImage: String, mapName: String = "",
        imageNames: [String] = []) {
         self.commonName = commonName
