@@ -19,6 +19,7 @@ extension UIViewController {
   }
   
   var statusBarHeight: CGFloat {
-    return UIApplication.sharedApplication().statusBarFrame.size.height + (navigationController?.navigationBar.bounds.height)!
+    return UIApplication.sharedApplication().statusBarFrame.size.height +
+      (navigationController?.navigationBar.bounds.height)!
   }
 }

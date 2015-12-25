@@ -12,9 +12,12 @@ import iOS_Slide_Menu
 class MenuViewController: UITableViewController {
   
   
+  
+  // names of menu items
   let menuItems = ["Snakes of Virginia", "About Snakes","Snake Identification",
     "Snake Conservation", "Snake Bite", "Living With Snakes", ""]
   
+  // Dictionary keys to look up in localized.strings when item is clicked
   let localizedStrings = ["", "Snakes_About", "Snake_Identification_Tips",
     "Snake_Conservation", "Snake_Bite", "Living_With_Snakes", ""]
   
@@ -22,8 +25,6 @@ class MenuViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     self.title = "Snakes Of VA"
-    
-    
   }
   
 
@@ -34,17 +35,14 @@ class MenuViewController: UITableViewController {
   
   
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    // print(SnakesManager.instance.snakes[section].count)
     return menuItems.count
   }
   
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    //let cell = tableView.dequeueReusableCellWithIdentifier("snakeCell") as! SnakeCell
     var cell =  UITableViewCell()
     switch indexPath.row {
     case 0...5:
-      
       cell.textLabel?.text = menuItems[indexPath.row]
     default:
       cell = SnakeCell(img: UIImage(named: "vhs_app_logo")!)
@@ -83,7 +81,7 @@ class MenuViewController: UITableViewController {
       return UITableViewCell().bounds.height
     }
     
-    return 200.0
+    return 200.0 // size of image logo
   }
 
 }

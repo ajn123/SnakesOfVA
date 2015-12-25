@@ -9,6 +9,17 @@
 import UIKit
 
 
+/**
+This class manages all the snakes, each snake has a slide show of image names.  
+ To add an image simply update that snakes image names array with the image name
+ (as a string) of that image.
+ 
+ 
+
+
+
+*/
+
 class SnakesManager {
     
     static var instance = SnakesManager()

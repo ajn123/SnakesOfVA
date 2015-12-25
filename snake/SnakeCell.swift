@@ -5,15 +5,11 @@
 //  Created by AJ Norton on 11/9/15.
 //  Copyright © 2015 AJ Norton. All rights reserved.
 //
-
 import UIKit
 import THLabel
 import iOS_Slide_Menu
 
-
 class SnakeCell: UITableViewCell {
-    
-    let CELL_HEIGHT = 200
   
     var label: THLabel = {
       var l = THLabel()
@@ -36,7 +32,6 @@ class SnakeCell: UITableViewCell {
     }()
     
     var bImage: UIImage!
-    
     var snake: Snake!
     
     convenience init(snake: Snake) {
@@ -44,10 +39,6 @@ class SnakeCell: UITableViewCell {
         self.snake = snake
         self.label.text = snake.commonName
         self.detailLabel.text = snake.scientificName
-        
-        // self.bImage =  snake.primaryImage!
-        // self.bImage =  UIImage(named: "northern_copperhead")!
-        // print(snake.commonName)
         self.bImage =  snake.primaryImage!
         
         setLayout()
@@ -58,10 +49,6 @@ class SnakeCell: UITableViewCell {
     self.snake = nil
     self.label.text = ""
     self.detailLabel.text = ""
-    
-    // self.bImage =  snake.primaryImage!
-    // self.bImage =  UIImage(named: "northern_copperhead")!
-    // print(snake.commonName)
     self.bImage = img
     
     let imageView1 = UIImageView(image: bImage)
@@ -75,14 +62,16 @@ class SnakeCell: UITableViewCell {
     self.addSubview(imageView1)
     
    
+    // calculates the middle of the screen to place the Snake Logo.
     let centerScreen = 20
-    let rightAlignment: Int = Int(SlideNavigationController.sharedInstance().portraitSlideOffset)
-      + centerScreen
+    let rightAlignment: Int =
+      Int(SlideNavigationController.sharedInstance().portraitSlideOffset)
+        + centerScreen
     
     
     let c1 =
-    NSLayoutConstraint.constraintsWithVisualFormat("V:|-[image]-|",
-      options: NSLayoutFormatOptions(), metrics: nil, views: dict)
+      NSLayoutConstraint.constraintsWithVisualFormat("V:|-[image]-|",
+        options: NSLayoutFormatOptions(), metrics: nil, views: dict)
     
     
     let c2 =
@@ -92,10 +81,7 @@ class SnakeCell: UITableViewCell {
     
     self.addConstraints(c1)
     self.addConstraints(c2)
-
   }
-  
- 
   
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -106,7 +92,6 @@ class SnakeCell: UITableViewCell {
         super.init(coder: aDecoder)
         setLayout()
     }
-    
     
     func setLayout() {
         
@@ -120,7 +105,9 @@ class SnakeCell: UITableViewCell {
         self.addSubview(imageView1)
         self.addSubview(label)
         self.addSubview(detailLabel)
-        
+      
+      
+        // Constraints for the image and labels
         let c1 =
           NSLayoutConstraint.constraintsWithVisualFormat("V:|[image]|",
             options: NSLayoutFormatOptions(), metrics: nil, views: dict)

@@ -11,7 +11,6 @@
 		21CC23AD1C083BF3003EBA8C /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CC23AC1C083BF3003EBA8C /* UIImageExtension.swift */; };
 		7F2A30101C18165100745E3F /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2A300F1C18165100745E3F /* MenuViewController.swift */; };
 		7FD7C9271C193AA900E38BF7 /* SnakeInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD7C9261C193AA900E38BF7 /* SnakeInformationViewController.swift */; };
-		7FFBFC3A1C2142980036C0E2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFBFC391C2142980036C0E2 /* Constants.swift */; };
 		7FFBFC3C1C2143EA0036C0E2 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFBFC3B1C2143EA0036C0E2 /* UIViewControllerExtension.swift */; };
 		A34AE7051BF260AC00FBBB19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34AE7041BF260AC00FBBB19 /* AppDelegate.swift */; };
 		A34AE7071BF260AC00FBBB19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34AE7061BF260AC00FBBB19 /* ViewController.swift */; };
@@ -33,7 +32,6 @@
 		7F2A300A1C1809C600745E3F /* iOS_Slide_Menu.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iOS_Slide_Menu.framework; path = "Pods/../build/Debug-iphoneos/iOS_Slide_Menu.framework"; sourceTree = "<group>"; };
 		7F2A300F1C18165100745E3F /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		7FD7C9261C193AA900E38BF7 /* SnakeInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnakeInformationViewController.swift; sourceTree = "<group>"; };
-		7FFBFC391C2142980036C0E2 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7FFBFC3B1C2143EA0036C0E2 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		A34AE7011BF260AC00FBBB19 /* snake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = snake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A34AE7041BF260AC00FBBB19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -127,7 +125,6 @@
 		7F08FA861C2CB0E4002A7307 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				7FFBFC391C2142980036C0E2 /* Constants.swift */,
 			);
 			name = Constants;
 			sourceTree = "<group>";
@@ -298,7 +295,6 @@
 				21CC23AD1C083BF3003EBA8C /* UIImageExtension.swift in Sources */,
 				A34AE7051BF260AC00FBBB19 /* AppDelegate.swift in Sources */,
 				A34AE7191BF267D900FBBB19 /* SnakesManager.swift in Sources */,
-				7FFBFC3A1C2142980036C0E2 /* Constants.swift in Sources */,
 				A34AE7171BF264FE00FBBB19 /* Snake.swift in Sources */,
 				7FD7C9271C193AA900E38BF7 /* SnakeInformationViewController.swift in Sources */,
 				A3777E9D1BFB949F00252EE6 /* SnakeCell.swift in Sources */,

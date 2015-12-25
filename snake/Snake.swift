@@ -10,7 +10,6 @@ import UIKit
 
 
 
-
 class Snake {
     var commonName:String
     var scientificName:String

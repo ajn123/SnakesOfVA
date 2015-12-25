@@ -17,7 +17,7 @@ class ViewController: UITableViewController, SlideNavigationControllerDelegate {
   
   var allSnakes = SnakesManager.instance.snakes.flatMap() { $0.map { $0 } }
   
-    override func viewDidLoad() {
+  override func viewDidLoad() {
       super.viewDidLoad()
       self.title = "Snakes Of VA"
       
@@ -30,8 +30,7 @@ class ViewController: UITableViewController, SlideNavigationControllerDelegate {
       searchController.dimsBackgroundDuringPresentation = false
       definesPresentationContext = true
       tableView.tableHeaderView = searchController.searchBar
-      
-     }
+    }
   
  
     func slideNavigationControllerShouldDisplayLeftMenu() -> Bool {
@@ -40,7 +39,6 @@ class ViewController: UITableViewController, SlideNavigationControllerDelegate {
   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
   
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -73,38 +71,50 @@ class ViewController: UITableViewController, SlideNavigationControllerDelegate {
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let vc = SnakeViewController()
-      if searchController.active && searchController.searchBar.text != "" {
-        vc.title = filteredSnakes[indexPath.row].commonName
-        vc.snake = filteredSnakes[indexPath.row]
-      }
-      else{
-        vc.title = SnakesManager.instance.snakes[indexPath.section][indexPath.row].commonName
-        vc.snake = SnakesManager.instance.snakes[indexPath.section][indexPath.row]
-      }
-        self.navigationController?.pushViewController(vc, animated: true)
+  override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+      let vc = SnakeViewController()
+    if searchController.active && searchController.searchBar.text != "" {
+      vc.title = filteredSnakes[indexPath.row].commonName
+      vc.snake = filteredSnakes[indexPath.row]
     }
-  
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 250.0 // cell height of snakes
+    else{
+      vc.title = SnakesManager.instance.snakes[indexPath.section][indexPath.row].commonName
+      vc.snake = SnakesManager.instance.snakes[indexPath.section][indexPath.row]
     }
-    
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-      if searchController.active || searchController.searchBar.text != "" {
-        return nil
-      }
-      return SnakesManager.instance.header[section]
+      self.navigationController?.pushViewController(vc, animated: true)
+  }
+
+  override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+      return 250.0 // cell height of snakes
+  }
+  
+  override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    if searchController.active || searchController.searchBar.text != "" {
+      return nil
     }
-  
-  
+    return SnakesManager.instance.header[section]
+  }
   
   override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-    let view = UIView()
-    let label = UILabel(frame: CGRect(x: 5, y: 5, width: screenWidth, height: 29))
-    label.font = UIFont.boldSystemFontOfSize(15.0)
-    view.addSubview(label)
+    
+    var fontSize: CGFloat = 15.0
+  
+    // Account for different screen sizes.
+    if(screenWidth <= 320)
+    {
+      fontSize = 11.0
+    }
+    else
+    {
+      fontSize = 15.0
+    }
+    
+    let label = UILabel(frame: CGRect(x: 5, y: 5, width: screenWidth, height: fontSize + 5.0))
+    label.font = UIFont.boldSystemFontOfSize(fontSize)
     label.text = SnakesManager.instance.header[section]
+    
+    let view = UIView()
+    view.addSubview(label)
     
     if(section == 0) {
       view.backgroundColor = UIColor.init(colorLiteralRed: 1.0, green: 0.0, blue: 0.0, alpha: 0.2)
@@ -119,16 +129,11 @@ class ViewController: UITableViewController, SlideNavigationControllerDelegate {
   
     // rescales the image to match aspect ratio before display
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell,
-      forRowAtIndexPath indexPath: NSIndexPath) {
-        let c = cell as! SnakeCell
-        c.bImage = UIImage.scaleUIImageToSize(c.bImage, size: c.frame.size)
+                            forRowAtIndexPath indexPath: NSIndexPath) {
+      let c = cell as! SnakeCell
+      c.bImage = UIImage.scaleUIImageToSize(c.bImage, size: c.frame.size)
    }
-    
-    // Set the section background color
-    override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        
-      
-    }
+  
 }
 
 
@@ -136,7 +141,6 @@ class ViewController: UITableViewController, SlideNavigationControllerDelegate {
   This code takes care of all the searching for snakes based on the 
  users input.
 */
-
 extension ViewController: UISearchResultsUpdating {
   func updateSearchResultsForSearchController(searchController: UISearchController) {
     filterContentForSearchText(searchController.searchBar.text!)

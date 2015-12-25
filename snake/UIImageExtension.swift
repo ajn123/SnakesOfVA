@@ -9,7 +9,11 @@
 import UIKit
 
 extension UIImage {
-    
+  
+    /**
+      Scales an image to keep its aspect ratio.
+
+    */
     class func scaleUIImageToSize(let image: UIImage, let size: CGSize) -> UIImage {
         UIGraphicsBeginImageContext(size)
         

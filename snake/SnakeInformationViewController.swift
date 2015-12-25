@@ -22,7 +22,6 @@ class SnakeInformationViewController: UIViewController, SlideNavigationControlle
   
   lazy var screenScrollView: UIScrollView = {
     var screen = UIScrollView(frame: UIScreen.mainScreen().bounds)
-    
     return screen
   }()
   
@@ -37,9 +36,8 @@ class SnakeInformationViewController: UIViewController, SlideNavigationControlle
   }
   
 
-  override func viewDidLoad() {
-    
-    
+  override func viewDidLoad()
+  {
     self.view.backgroundColor = UIColor.blackColor()
     self.edgesForExtendedLayout = UIRectEdge.Bottom.intersect(UIRectEdge.Top)
     
@@ -53,9 +51,8 @@ class SnakeInformationViewController: UIViewController, SlideNavigationControlle
         action: "toggleLeftMenu")
     
     
-    let c1 = NSLayoutConstraint(item: label, attribute: .Top,
-      relatedBy: .Equal, toItem: self.screenScrollView, attribute: .Top, multiplier: 1.0,
-      constant: 5.0)
+    let c1 = NSLayoutConstraint(item: label, attribute: .Top, relatedBy: .Equal,
+      toItem: self.screenScrollView, attribute: .Top, multiplier: 1.0, constant: 5.0)
     
     let c2 = NSLayoutConstraint(item: label, attribute: .Width, relatedBy: .Equal,
       toItem: self.screenScrollView, attribute: .Width, multiplier: 1.0, constant: -20)
