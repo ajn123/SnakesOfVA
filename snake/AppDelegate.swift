@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           
       let slideNavVC = SlideNavigationController(rootViewController: ViewController())
       SlideNavigationController.sharedInstance().portraitSlideOffset = 0.0
+      SlideNavigationController.sharedInstance().avoidSwitchingToSameClassViewController = false 
           
       window?.rootViewController = slideNavVC
           

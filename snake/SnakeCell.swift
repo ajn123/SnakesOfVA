@@ -58,9 +58,7 @@ class SnakeCell: UITableViewCell {
     
     let dict = ["image": imageView1, "label": label, "detailLabel": detailLabel]
     
-    
     self.addSubview(imageView1)
-    
    
     // calculates the middle of the screen to place the Snake Logo.
     let centerScreen = 20

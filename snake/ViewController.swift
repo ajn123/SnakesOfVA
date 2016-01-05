@@ -13,8 +13,7 @@ class ViewController: UITableViewController, SlideNavigationControllerDelegate {
   
   var filteredSnakes = [Snake]()
   
-  let searchController = UISearchController(searchResultsController: nil)
-  
+  var searchController: UISearchController! = nil 
   var allSnakes = SnakesManager.instance.snakes.flatMap() { $0.map { $0 } }
   
   override func viewDidLoad() {
@@ -26,6 +25,7 @@ class ViewController: UITableViewController, SlideNavigationControllerDelegate {
       self.tableView.registerClass(SnakeCell.self, forCellReuseIdentifier: "snakeCell")
       
       // search controller 
+      searchController = UISearchController(searchResultsController: nil)
       searchController.searchResultsUpdater = self
       searchController.dimsBackgroundDuringPresentation = false
       definesPresentationContext = true
@@ -72,7 +72,7 @@ class ViewController: UITableViewController, SlideNavigationControllerDelegate {
     }
     
   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-      let vc = SnakeViewController()
+    let vc = SnakeViewController()
     if searchController.active && searchController.searchBar.text != "" {
       vc.title = filteredSnakes[indexPath.row].commonName
       vc.snake = filteredSnakes[indexPath.row]
@@ -81,7 +81,7 @@ class ViewController: UITableViewController, SlideNavigationControllerDelegate {
       vc.title = SnakesManager.instance.snakes[indexPath.section][indexPath.row].commonName
       vc.snake = SnakesManager.instance.snakes[indexPath.section][indexPath.row]
     }
-      self.navigationController?.pushViewController(vc, animated: true)
+    self.navigationController?.pushViewController(vc, animated: true)
   }
 
   override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -150,9 +150,9 @@ extension ViewController: UISearchResultsUpdating {
     filteredSnakes.removeAll()
     
     filteredSnakes = allSnakes.filter()
-      {
-        snake in
-        return snake.commonName.lowercaseString.containsString(searchString.lowercaseString)
+    {
+      snake in
+      return snake.commonName.lowercaseString.containsString(searchString.lowercaseString)
     }
     
     tableView.reloadData()

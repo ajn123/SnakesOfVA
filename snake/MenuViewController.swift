@@ -70,9 +70,15 @@ class MenuViewController: UITableViewController {
     default:
         let str = localizedStrings[indexPath.row]
         let title = menuItems[indexPath.row]
+        
+        var snakeVC = SnakeInformationViewController(str: str, title: title)
+        
+    //    SlideNavigationController.sharedInstance().popToRootViewControllerAnimated(false)
+//        SlideNavigationController.sharedInstance().popToRootAndSwitchToViewController(snakeVC, withCompletion: nil)
+        
         SlideNavigationController.sharedInstance().pushViewController(
-          SnakeInformationViewController(str: str, title: title), animated: true)
-      }
+          snakeVC, animated: false)
+    }
   }
   
   override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {

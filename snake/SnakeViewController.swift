@@ -95,7 +95,7 @@
       
         let descriptionLabelConstraint2 =
         NSLayoutConstraint(item: descriptionLabel, attribute: .Width, relatedBy: .Equal,
-          toItem: self.screenScrollView, attribute: .Width, multiplier: 1.0, constant: -5.0)
+          toItem: self.screenScrollView, attribute: .Width, multiplier: 1.0, constant: -10.0)
       
         let descriptionLabelConstraint3 =
         NSLayoutConstraint(item: descriptionLabel, attribute: .Left, relatedBy: .Equal,
@@ -103,7 +103,7 @@
         
         let descriptionLabelConstraint4 =
         NSLayoutConstraint(item: descriptionLabel, attribute: .Right, relatedBy: .Equal,
-          toItem: screenScrollView, attribute: .Right, multiplier: 1.0, constant: 5)
+          toItem: screenScrollView, attribute: .Right, multiplier: 1.0, constant: -5)
         // *********************************************************************************
       
       
@@ -188,13 +188,13 @@
             
             let detailConstraint = NSLayoutConstraint(item: detailLabel, attribute: .Top, relatedBy: .Equal,
                 toItem: label, attribute: .Bottom, multiplier: 1, constant: detailLabelVerticalDistance)
-            
+          
             let widthConstraint = NSLayoutConstraint(item: label, attribute: .Width, relatedBy: .Equal,
-                toItem: self.screenScrollView, attribute: .Width, multiplier: 1.0, constant: -5.0)
+                toItem: self.screenScrollView, attribute: .Width, multiplier: 1.0, constant: -10.0)
             
             let widthConstraint2 =
               NSLayoutConstraint(item: detailLabel, attribute: .Width, relatedBy: .Equal,
-                toItem: self.screenScrollView, attribute: .Width, multiplier: 1.0, constant: -5.0)
+                toItem: self.screenScrollView, attribute: .Width, multiplier: 1.0, constant: -10.0)
           
             let rightConstraint =
               NSLayoutConstraint(item: detailLabel, attribute: .Left, relatedBy: .Equal,
@@ -206,11 +206,11 @@
           
             let leftConstraint =
               NSLayoutConstraint(item: detailLabel, attribute: .Right, relatedBy: .Equal,
-                toItem: screenScrollView, attribute: .Right, multiplier: 1.0, constant: 5)
+                toItem: screenScrollView, attribute: .Right, multiplier: 1.0, constant: -5)
           
             let leftConstraint2 =
               NSLayoutConstraint(item: label, attribute: .Right, relatedBy: .Equal,
-                toItem: screenScrollView, attribute: .Right, multiplier: 1.0, constant: 5)
+                toItem: screenScrollView, attribute: .Right, multiplier: 1.0, constant: -5)
             
             self.view.addConstraints([titleConstraint, detailConstraint])
             self.view.addConstraints([widthConstraint, widthConstraint2])
@@ -242,11 +242,11 @@
 
 extension SnakeViewController: UIScrollViewDelegate {
 
-    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
-        let pageNumber = round(scrollView.contentOffset.x / scrollView.frame.size.width)
-        pageControl.currentPage = Int(pageNumber)
-    }
+  func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+      let pageNumber = round(scrollView.contentOffset.x / scrollView.frame.size.width)
+      pageControl.currentPage = Int(pageNumber)
   }
+}
 
 
 

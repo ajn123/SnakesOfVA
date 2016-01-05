@@ -22,6 +22,7 @@ class SnakeInformationViewController: UIViewController, SlideNavigationControlle
   
   lazy var screenScrollView: UIScrollView = {
     var screen = UIScrollView(frame: UIScreen.mainScreen().bounds)
+  
     return screen
   }()
   
@@ -29,6 +30,8 @@ class SnakeInformationViewController: UIViewController, SlideNavigationControlle
     super.init(nibName: nil, bundle: nil)
     self.title = title
     label.text = NSLocalizedString(str, comment: "content")
+    viewDidLoad()
+
   }
 
   required init?(coder aDecoder: NSCoder) {
@@ -50,7 +53,6 @@ class SnakeInformationViewController: UIViewController, SlideNavigationControlle
         target: SlideNavigationController.sharedInstance(),
         action: "toggleLeftMenu")
     
-    
     let c1 = NSLayoutConstraint(item: label, attribute: .Top, relatedBy: .Equal,
       toItem: self.screenScrollView, attribute: .Top, multiplier: 1.0, constant: 5.0)
     
@@ -61,10 +63,9 @@ class SnakeInformationViewController: UIViewController, SlideNavigationControlle
       toItem: self.screenScrollView, attribute: .Left, multiplier: 1.0, constant: 10.0)
     
     let c4 = NSLayoutConstraint(item: label, attribute: .Right, relatedBy: .Equal,
-      toItem: self.screenScrollView, attribute: .Right, multiplier: 1.0, constant: 10.0)
+      toItem: self.screenScrollView, attribute: .Right, multiplier: 1.0, constant: -10.0)
     
     self.screenScrollView.addConstraints([c1,c2,c3,c4])
-    
   }
   
   func slideNavigationControllerShouldDisplayLeftMenu() -> Bool {
@@ -72,7 +73,8 @@ class SnakeInformationViewController: UIViewController, SlideNavigationControlle
   }
   
   override func viewDidAppear(animated: Bool) {
-    screenScrollView.contentSize = CGSize(width: screenWidth, height: label.bounds.height + statusBarHeight + 5.0)
+    // print(label.bounds.height + statusBarHeight + 5.0)
+    screenScrollView.contentSize = CGSize(width: screenWidth, height: label.frame.height + 2000.0 + statusBarHeight + 5.0)
   }
   
 }
